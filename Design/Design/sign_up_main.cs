@@ -67,7 +67,10 @@ namespace Design
 
         private void manager_sign_up_button_Click(object sender, EventArgs e)
         {
-
+            manager_login loginForm = new manager_login();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
 
         private void employee_signUp_button_Click(object sender, EventArgs e)
