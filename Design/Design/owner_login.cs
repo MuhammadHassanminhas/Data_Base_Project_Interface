@@ -20,7 +20,7 @@ namespace Design
             back_button.BackColor = Color.Transparent;
             ApplyRoundedButtons();
         }
-
+        // checking 
         private void ApplyRoundedButtons()
         {
             // Apply rounded corners to buttons on form load
