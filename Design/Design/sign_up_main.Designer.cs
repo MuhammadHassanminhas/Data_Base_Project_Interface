@@ -76,6 +76,7 @@
             employee_signUp_button.TabIndex = 4;
             employee_signUp_button.Text = "Employee";
             employee_signUp_button.UseVisualStyleBackColor = false;
+            employee_signUp_button.Click += employee_signUp_button_Click;
             // 
             // receptionist_sign_up_button
             // 
@@ -105,6 +106,7 @@
             manager_sign_up_button.TabIndex = 2;
             manager_sign_up_button.Text = "Manager";
             manager_sign_up_button.UseVisualStyleBackColor = false;
+            manager_sign_up_button.Click += manager_sign_up_button_Click;
             // 
             // owner_sign_up_button
             // 
