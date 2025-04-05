@@ -77,7 +77,10 @@ namespace Design
 
         private void owner_login_up_button_Click(object sender, EventArgs e)
         {
-
+            owner_dash_board loginForm = new owner_dash_board();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
     }
 }
