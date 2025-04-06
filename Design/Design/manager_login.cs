@@ -60,7 +60,10 @@ namespace Design
 
         private void owner_login_up_button_Click(object sender, EventArgs e)
         {
-
+            manager_dash_board loginForm = new manager_dash_board();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
 
         private void back_button_Click(object sender, EventArgs e)
