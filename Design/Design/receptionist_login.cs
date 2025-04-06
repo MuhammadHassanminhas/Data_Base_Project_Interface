@@ -64,7 +64,10 @@ namespace Design
 
         private void receptionist_login_up_button_Click(object sender, EventArgs e)
         {
-
+            receptionist_dash_board loginForm = new receptionist_dash_board();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
 
         private void owner_heading_main_Click(object sender, EventArgs e)
