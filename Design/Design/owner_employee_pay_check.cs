@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class owner_employee_pay_check: Form
+    public partial class owner_employee_pay_check : Form
     {
         public owner_employee_pay_check()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
