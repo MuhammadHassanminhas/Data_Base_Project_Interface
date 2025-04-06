@@ -44,6 +44,8 @@
             label4 = new Label();
             service_name = new TextBox();
             label2 = new Label();
+            generate_bill = new System.Drawing.Printing.PrintDocument();
+            printDialog1 = new PrintDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -215,6 +217,14 @@
             label2.TabIndex = 9;
             label2.Text = "NAME";
             // 
+            // generate_bill
+            // 
+            generate_bill.PrintPage += generate_bill_PrintPage;
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            // 
             // recdeptionist_generate_bill
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -248,5 +258,7 @@
         private Label label6;
         private Button button1;
         private ComboBox comboBox1;
+        private System.Drawing.Printing.PrintDocument generate_bill;
+        private PrintDialog printDialog1;
     }
 }
