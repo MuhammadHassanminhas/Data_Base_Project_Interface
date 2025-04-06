@@ -32,7 +32,6 @@
             panel1 = new Panel();
             label4 = new Label();
             textBox9 = new TextBox();
-            textBox7 = new TextBox();
             label8 = new Label();
             textBox8 = new TextBox();
             label9 = new Label();
@@ -42,15 +41,16 @@
             label3 = new Label();
             service_name = new TextBox();
             label2 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(textBox9);
-            panel1.Controls.Add(textBox7);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(textBox8);
             panel1.Controls.Add(label9);
@@ -83,13 +83,6 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(206, 40);
             textBox9.TabIndex = 24;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(280, 29);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(206, 23);
-            textBox7.TabIndex = 19;
             // 
             // label8
             // 
@@ -140,7 +133,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(820, 33);
+            textBox2.Location = new Point(709, 33);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(206, 23);
             textBox2.TabIndex = 9;
@@ -174,6 +167,13 @@
             label2.TabIndex = 4;
             label2.Text = "TOTAL SERVICES PER MONTH";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(165, 29);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 26;
+            // 
             // total_earnings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -194,7 +194,6 @@
         private Panel panel1;
         private Label label4;
         private TextBox textBox9;
-        private TextBox textBox7;
         private Label label8;
         private TextBox textBox8;
         private Label label9;
@@ -204,5 +203,6 @@
         private Label label3;
         private TextBox service_name;
         private Label label2;
+        private DateTimePicker dateTimePicker1;
     }
 }

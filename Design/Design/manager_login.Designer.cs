@@ -150,11 +150,11 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Cambria", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(255, 136, 183);
-            label1.Location = new Point(14, 139);
+            label1.Location = new Point(55, 116);
             label1.Name = "label1";
-            label1.Size = new Size(435, 57);
+            label1.Size = new Size(352, 57);
             label1.TabIndex = 1;
-            label1.Text = "Receptionist Login";
+            label1.Text = "Manager Login";
             // 
             // back_button
             // 

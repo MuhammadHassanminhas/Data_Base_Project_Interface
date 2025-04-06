@@ -34,9 +34,6 @@
             textBox9 = new TextBox();
             button1 = new Button();
             ADD_BUTTON = new Button();
-            textBox6 = new TextBox();
-            label7 = new Label();
-            textBox7 = new TextBox();
             label8 = new Label();
             textBox8 = new TextBox();
             label9 = new Label();
@@ -50,19 +47,18 @@
             label1 = new Label();
             service_name = new TextBox();
             label2 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(textBox9);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(ADD_BUTTON);
-            panel1.Controls.Add(textBox6);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(textBox7);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(textBox8);
             panel1.Controls.Add(label9);
@@ -133,31 +129,6 @@
             ADD_BUTTON.Text = "RELEASE";
             ADD_BUTTON.UseVisualStyleBackColor = false;
             // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(442, 283);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(206, 23);
-            textBox6.TabIndex = 21;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial", 14.25F, FontStyle.Bold);
-            label7.ForeColor = Color.FromArgb(255, 136, 183);
-            label7.Location = new Point(357, 284);
-            label7.Name = "label7";
-            label7.Size = new Size(62, 22);
-            label7.TabIndex = 20;
-            label7.Text = "YEAR";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(128, 283);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(206, 23);
-            textBox7.TabIndex = 19;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -165,9 +136,9 @@
             label8.ForeColor = Color.FromArgb(255, 136, 183);
             label8.Location = new Point(24, 284);
             label8.Name = "label8";
-            label8.Size = new Size(81, 22);
+            label8.Size = new Size(138, 22);
             label8.TabIndex = 18;
-            label8.Text = "MONTH";
+            label8.Text = "MONTH/YEAR";
             // 
             // textBox8
             // 
@@ -277,6 +248,13 @@
             label2.TabIndex = 4;
             label2.Text = "NAME";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(177, 284);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 26;
+            // 
             // owner_employee_pay_check
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -301,9 +279,6 @@
         private Label label1;
         private TextBox service_name;
         private Label label2;
-        private TextBox textBox6;
-        private Label label7;
-        private TextBox textBox7;
         private Label label8;
         private TextBox textBox8;
         private Label label9;
@@ -315,5 +290,6 @@
         private Button ADD_BUTTON;
         private TextBox textBox9;
         private Label label4;
+        private DateTimePicker dateTimePicker1;
     }
 }

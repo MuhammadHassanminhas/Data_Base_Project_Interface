@@ -50,7 +50,7 @@ namespace Design
                 textBox_employee_password.PasswordChar = '*';
             }
         }
-       
+
 
         private void show_button_Click(object sender, EventArgs e)
         {
@@ -59,6 +59,14 @@ namespace Design
                 hide_button.BringToFront();
                 textBox_employee_password.PasswordChar = '\0';
             }
+        }
+
+        private void owner_login_up_button_Click(object sender, EventArgs e)
+        {
+            employee_dash_board loginForm = new employee_dash_board();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
     }
 }

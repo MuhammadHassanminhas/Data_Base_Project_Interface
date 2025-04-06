@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employee));
             panel1 = new Panel();
+            label2 = new Label();
             show_button = new Button();
             textBox_employee_password = new TextBox();
             hide_button = new Button();
@@ -39,7 +40,6 @@
             panel2 = new Panel();
             label1 = new Label();
             back_button = new Button();
-            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -59,6 +59,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(549, 610);
             panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(122, 420);
+            label2.Name = "label2";
+            label2.Size = new Size(200, 22);
+            label2.TabIndex = 15;
+            label2.Text = "Enter Login Password";
             // 
             // show_button
             // 
@@ -134,6 +144,7 @@
             owner_login_up_button.TabIndex = 7;
             owner_login_up_button.Text = "Login";
             owner_login_up_button.UseVisualStyleBackColor = false;
+            owner_login_up_button.Click += owner_login_up_button_Click;
             // 
             // panel2
             // 
@@ -174,16 +185,6 @@
             back_button.TabIndex = 2;
             back_button.UseVisualStyleBackColor = false;
             back_button.Click += back_button_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(122, 420);
-            label2.Name = "label2";
-            label2.Size = new Size(200, 22);
-            label2.TabIndex = 15;
-            label2.Text = "Enter Login Password";
             // 
             // employee
             // 

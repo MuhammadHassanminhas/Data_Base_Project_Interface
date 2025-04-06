@@ -34,10 +34,8 @@
             DELETE_BUTTON = new Button();
             EDIT_BUTTON = new Button();
             ADD_BUTTON = new Button();
-            label5 = new Label();
             service_price = new TextBox();
             label4 = new Label();
-            service_category = new ComboBox();
             service_name = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
@@ -51,10 +49,8 @@
             panel1.Controls.Add(DELETE_BUTTON);
             panel1.Controls.Add(EDIT_BUTTON);
             panel1.Controls.Add(ADD_BUTTON);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(service_price);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(service_category);
             panel1.Controls.Add(service_name);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(21, 24);
@@ -119,17 +115,6 @@
             ADD_BUTTON.Text = "ADD";
             ADD_BUTTON.UseVisualStyleBackColor = false;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 14.25F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(255, 136, 183);
-            label5.Location = new Point(15, 232);
-            label5.Name = "label5";
-            label5.Size = new Size(117, 22);
-            label5.TabIndex = 9;
-            label5.Text = "CATEGORY";
-            // 
             // service_price
             // 
             service_price.Location = new Point(139, 188);
@@ -147,15 +132,6 @@
             label4.Size = new Size(68, 22);
             label4.TabIndex = 7;
             label4.Text = "PRICE";
-            // 
-            // service_category
-            // 
-            service_category.FormattingEnabled = true;
-            service_category.Location = new Point(138, 235);
-            service_category.Name = "service_category";
-            service_category.Size = new Size(206, 23);
-            service_category.TabIndex = 6;
-            service_category.Text = "SELECT";
             // 
             // service_name
             // 
@@ -198,10 +174,8 @@
         private Button DELETE_BUTTON;
         private Button EDIT_BUTTON;
         private Button ADD_BUTTON;
-        private Label label5;
         private TextBox service_price;
         private Label label4;
-        private ComboBox service_category;
         private TextBox service_name;
         private Label label2;
     }
