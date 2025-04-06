@@ -38,6 +38,8 @@
             label4 = new Label();
             service_name = new TextBox();
             label2 = new Label();
+            textBox1 = new TextBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).BeginInit();
             SuspendLayout();
@@ -45,6 +47,8 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(attendence_dataGridView);
             panel1.Controls.Add(DELETE_BUTTON);
             panel1.Controls.Add(EDIT_BUTTON);
@@ -151,6 +155,25 @@
             label2.TabIndex = 2;
             label2.Text = "NAME";
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(221, 106);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(430, 23);
+            textBox1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(255, 136, 183);
+            label1.Location = new Point(82, 107);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 22);
+            label1.TabIndex = 15;
+            label1.Text = "ADDRESS";
+            // 
             // owner_client_data
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -178,5 +201,7 @@
         private Label label4;
         private TextBox service_name;
         private Label label2;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

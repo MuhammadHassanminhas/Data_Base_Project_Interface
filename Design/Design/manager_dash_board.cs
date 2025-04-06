@@ -62,7 +62,7 @@ namespace Design
 
         private void manager_attendence_Click(object sender, EventArgs e)
         {
-            load_form_obj(new manager_attendence());
+            load_form_obj(new owner_employee_attendance());
         }
 
         private void manager_sallary_Click(object sender, EventArgs e)
