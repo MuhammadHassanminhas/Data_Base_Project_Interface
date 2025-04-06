@@ -12,9 +12,21 @@ namespace Design
 {
     public partial class owner_dash_board : Form
     {
+
         public owner_dash_board()
         {
             InitializeComponent();
+        }
+        public void load_form_obj(object form)
+        {
+            if (this.main_panel.Controls.Count > 0)
+                this.main_panel.Controls.RemoveAt(0);
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.main_panel.Controls.Add(fh);
+            this.main_panel.Tag = fh;
+            fh.Show();
         }
         bool employee_menu_expand = false;
 
@@ -75,6 +87,48 @@ namespace Design
         private void records_button_Click(object sender, EventArgs e)
         {
             record_menu_timer.Start();
+        }
+
+        private void owner_dash_board_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void total_earning_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new total_earnings());
+        }
+
+
+
+        private void paycheck_button_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new owner_employee_pay_check());
+        }
+
+        private void owner_stock_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new stock_owner());
+        }
+
+        private void services_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new services());
+        }
+
+        private void attendence_button_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new owner_employee_attendance());
+        }
+
+        private void employee_record_button_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new owner_employee_data());
+        }
+
+        private void client_record_button_Click(object sender, EventArgs e)
+        {
+            load_form_obj(new owner_client_data());
         }
     }
 }

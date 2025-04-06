@@ -53,9 +53,6 @@
             panel17 = new Panel();
             panel18 = new Panel();
             attendence_button = new Button();
-            panel13 = new Panel();
-            panel14 = new Panel();
-            owner_logout = new Button();
             records_menu_container = new FlowLayoutPanel();
             panel9 = new Panel();
             panel10 = new Panel();
@@ -66,8 +63,12 @@
             panel22 = new Panel();
             panel23 = new Panel();
             client_record_button = new Button();
+            panel13 = new Panel();
+            panel14 = new Panel();
+            owner_logout = new Button();
             employee_menu_timer = new System.Windows.Forms.Timer(components);
             record_menu_timer = new System.Windows.Forms.Timer(components);
+            main_panel = new Panel();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -77,11 +78,11 @@
             panel7.SuspendLayout();
             panel15.SuspendLayout();
             panel17.SuspendLayout();
-            panel13.SuspendLayout();
             records_menu_container.SuspendLayout();
             panel9.SuspendLayout();
             panel20.SuspendLayout();
             panel22.SuspendLayout();
+            panel13.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -171,6 +172,7 @@
             total_earning.TabIndex = 2;
             total_earning.Text = "TOTAL EARNING";
             total_earning.UseVisualStyleBackColor = false;
+            total_earning.Click += total_earning_Click;
             // 
             // panel5
             // 
@@ -207,6 +209,7 @@
             owner_stock.TabIndex = 2;
             owner_stock.Text = "STOCK";
             owner_stock.UseVisualStyleBackColor = false;
+            owner_stock.Click += owner_stock_Click;
             // 
             // panel11
             // 
@@ -243,6 +246,7 @@
             services.TabIndex = 2;
             services.Text = "SERVICES";
             services.UseVisualStyleBackColor = false;
+            services.Click += services_Click;
             // 
             // employee_menu_container
             // 
@@ -252,7 +256,7 @@
             employee_menu_container.Controls.Add(panel17);
             employee_menu_container.Location = new Point(3, 199);
             employee_menu_container.Name = "employee_menu_container";
-            employee_menu_container.Size = new Size(246, 52);
+            employee_menu_container.Size = new Size(246, 51);
             employee_menu_container.TabIndex = 2;
             employee_menu_container.Paint += employee_menu_container_Paint;
             // 
@@ -328,6 +332,7 @@
             paycheck_button.TabIndex = 2;
             paycheck_button.Text = "PAYCHECK";
             paycheck_button.UseVisualStyleBackColor = false;
+            paycheck_button.Click += paycheck_button_Click;
             // 
             // panel17
             // 
@@ -364,42 +369,7 @@
             attendence_button.TabIndex = 2;
             attendence_button.Text = "ATTENDENCE";
             attendence_button.UseVisualStyleBackColor = false;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.FromArgb(253, 210, 227);
-            panel13.Controls.Add(panel14);
-            panel13.Controls.Add(owner_logout);
-            panel13.Location = new Point(3, 315);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(246, 43);
-            panel13.TabIndex = 5;
-            // 
-            // panel14
-            // 
-            panel14.BackColor = Color.Transparent;
-            panel14.BackgroundImage = (Image)resources.GetObject("panel14.BackgroundImage");
-            panel14.BackgroundImageLayout = ImageLayout.Zoom;
-            panel14.Location = new Point(9, 9);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(32, 30);
-            panel14.TabIndex = 2;
-            // 
-            // owner_logout
-            // 
-            owner_logout.BackColor = Color.Transparent;
-            owner_logout.FlatAppearance.BorderSize = 0;
-            owner_logout.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            owner_logout.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            owner_logout.FlatStyle = FlatStyle.Flat;
-            owner_logout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            owner_logout.ForeColor = Color.Black;
-            owner_logout.Location = new Point(47, 3);
-            owner_logout.Name = "owner_logout";
-            owner_logout.Size = new Size(184, 37);
-            owner_logout.TabIndex = 2;
-            owner_logout.Text = "LOGOUT";
-            owner_logout.UseVisualStyleBackColor = false;
+            attendence_button.Click += attendence_button_Click;
             // 
             // records_menu_container
             // 
@@ -407,9 +377,9 @@
             records_menu_container.Controls.Add(panel9);
             records_menu_container.Controls.Add(panel20);
             records_menu_container.Controls.Add(panel22);
-            records_menu_container.Location = new Point(3, 257);
+            records_menu_container.Location = new Point(3, 256);
             records_menu_container.Name = "records_menu_container";
-            records_menu_container.Size = new Size(246, 52);
+            records_menu_container.Size = new Size(246, 51);
             records_menu_container.TabIndex = 6;
             // 
             // panel9
@@ -484,6 +454,7 @@
             employee_record_button.TabIndex = 2;
             employee_record_button.Text = "EMPLOYEE";
             employee_record_button.UseVisualStyleBackColor = false;
+            employee_record_button.Click += employee_record_button_Click;
             // 
             // panel22
             // 
@@ -520,6 +491,43 @@
             client_record_button.TabIndex = 2;
             client_record_button.Text = "CLIENT";
             client_record_button.UseVisualStyleBackColor = false;
+            client_record_button.Click += client_record_button_Click;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(253, 210, 227);
+            panel13.Controls.Add(panel14);
+            panel13.Controls.Add(owner_logout);
+            panel13.Location = new Point(3, 313);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(246, 43);
+            panel13.TabIndex = 5;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.Transparent;
+            panel14.BackgroundImage = (Image)resources.GetObject("panel14.BackgroundImage");
+            panel14.BackgroundImageLayout = ImageLayout.Zoom;
+            panel14.Location = new Point(9, 9);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(32, 30);
+            panel14.TabIndex = 2;
+            // 
+            // owner_logout
+            // 
+            owner_logout.BackColor = Color.Transparent;
+            owner_logout.FlatAppearance.BorderSize = 0;
+            owner_logout.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            owner_logout.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            owner_logout.FlatStyle = FlatStyle.Flat;
+            owner_logout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            owner_logout.ForeColor = Color.Black;
+            owner_logout.Location = new Point(47, 3);
+            owner_logout.Name = "owner_logout";
+            owner_logout.Size = new Size(184, 37);
+            owner_logout.TabIndex = 2;
+            owner_logout.Text = "LOGOUT";
+            owner_logout.UseVisualStyleBackColor = false;
             // 
             // employee_menu_timer
             // 
@@ -529,16 +537,27 @@
             // 
             record_menu_timer.Tick += record_menu_timer_Tick;
             // 
+            // main_panel
+            // 
+            main_panel.BackgroundImage = (Image)resources.GetObject("main_panel.BackgroundImage");
+            main_panel.Dock = DockStyle.Fill;
+            main_panel.Location = new Point(263, 0);
+            main_panel.Name = "main_panel";
+            main_panel.Size = new Size(1128, 666);
+            main_panel.TabIndex = 2;
+            // 
             // owner_dash_board
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1391, 666);
+            Controls.Add(main_panel);
             Controls.Add(flowLayoutPanel1);
             ForeColor = Color.FromArgb(255, 136, 183);
             Name = "owner_dash_board";
             Text = "owner_dash_board";
+            Load += owner_dash_board_Load;
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -548,11 +567,11 @@
             panel7.ResumeLayout(false);
             panel15.ResumeLayout(false);
             panel17.ResumeLayout(false);
-            panel13.ResumeLayout(false);
             records_menu_container.ResumeLayout(false);
             panel9.ResumeLayout(false);
             panel20.ResumeLayout(false);
             panel22.ResumeLayout(false);
+            panel13.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -595,5 +614,6 @@
         private Button employee_record_button;
         private FlowLayoutPanel records_menu_container;
         private System.Windows.Forms.Timer record_menu_timer;
+        private Panel main_panel;
     }
 }
