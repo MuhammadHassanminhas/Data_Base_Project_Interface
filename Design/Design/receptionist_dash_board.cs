@@ -44,7 +44,7 @@ namespace Design
 
         private void button3_Click(object sender, EventArgs e)
         {
-            load_form_obj(new owner_client_data());
+            load_form_obj(new receptionist_view_client_data());
         }
     }
 }
