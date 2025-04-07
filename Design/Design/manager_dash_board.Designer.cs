@@ -130,6 +130,7 @@
             owner_menu.TabIndex = 2;
             owner_menu.Text = "MENU";
             owner_menu.UseVisualStyleBackColor = false;
+            owner_menu.Click += owner_menu_Click;
             // 
             // panel5
             // 
@@ -473,6 +474,7 @@
             owner_logout.TabIndex = 2;
             owner_logout.Text = "LOGOUT";
             owner_logout.UseVisualStyleBackColor = false;
+            owner_logout.Click += owner_logout_Click;
             // 
             // RECORD_MENU_TIMER_MANAGER
             // 
@@ -496,6 +498,7 @@
             Controls.Add(main_panel);
             Controls.Add(flowLayoutPanel1);
             Name = "manager_dash_board";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "manager_dash_board";
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

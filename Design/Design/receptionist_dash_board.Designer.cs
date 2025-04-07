@@ -103,6 +103,7 @@
             owner_menu.TabIndex = 2;
             owner_menu.Text = "MENU";
             owner_menu.UseVisualStyleBackColor = false;
+            owner_menu.Click += owner_menu_Click;
             // 
             // panel3
             // 
@@ -250,6 +251,7 @@
             button4.TabIndex = 2;
             button4.Text = "LOGOUT";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // main_panel
             // 
@@ -269,6 +271,7 @@
             Controls.Add(main_panel);
             Controls.Add(flowLayoutPanel1);
             Name = "receptionist_dash_board";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "receptionist_dash_board";
             Load += receptionist_dash_board_Load;
             flowLayoutPanel1.ResumeLayout(false);

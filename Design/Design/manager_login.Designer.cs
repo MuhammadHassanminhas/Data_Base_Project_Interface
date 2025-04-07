@@ -183,6 +183,7 @@
             Controls.Add(back_button);
             Controls.Add(panel1);
             Name = "manager_login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "manager_login";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -118,10 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel14.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHlSURBVEhLpdW5
+        S1xRFMfxZwIKwailSaHGxkJcUIhgJYIxiUujhQa0tnT7M4SkELEVG8nyN0hQidH/QlEbN8St0fj9PeYO
+        Zw53tnjgA865b+7zLudMUmK8QDN60I03eIlnRQWG8AsX+OecYx0fUXZ0Yhd+0nx+ox0lxTTuEJuokGuM
+        o2BM4QGxCUrxiDFEQ0u8R+yLwWpGbCzQStqQEzrQPfiHj/DTfO7LCJ+3cGw+B5vIic/wDx3gHd5CS1fO
+        v6AFur6HJhcMIhvf4R8YwCvsmJx/gVZdjQ8mF6whDRXRFeygrp1iBTbvXyDLUGi7bP4UmjvdBjsgs3iN
+        G5OT2At0qFrFvMkF9UjL3w+MQMXm8zMZPq9bM+py0oWk1ySCYajn+Hw+HdA/5fPvkTSaRDCHKtyaXD7a
+        xkosmFzQhLQr+mYWDvkrbD5mCYpt2PwZVF9p/IAdlH7UYt/kvL+oge68H9PVz0bsAVVxA+rwDbaN6G+t
+        TmPa4hPY70pOG9dSYu1ZbUAFp9A+t2bob4UKLDa5ijO7PSHU7PK1aRWRDlE3RRbh9zzQxdCtisYEQt/5
+        H2r1X1AwJlGsbcdo9UUnD6HtKucn8w90NmWFDkmHqOumH3g/6SU28AnPDhWjrqzah6QVWjyS5AmHSFMm
+        WyBObAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUYAAAFTCAYAAABFzKXYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAdmJJREFUeF7tneda40oTrc/938c5394zw+ScZ4gGk4MxJmcYMME4ynadtUpqI0Qz
+        wAAADsABataJCQAAdmJJREFUeF7tneda40oTrc/938c5394zw+ScZ4gGk4MxJmcYMME4ynadtUpqI0Qz
         aRuwoX68j2Sp1ZJb3UtVHf/P1taWVD7NytmTYSn+MyjVx2mpfZiVRnpd6sOrcvxmTA6eDUu1d0GCiU05
         68vK8esxKTwZkZNHQ3L6blKCyQ1pLuWlmTtQGosHUl8Kt83FHyJLv08zInm8vrSvx+uLe4h3T5rLPyRY
         2L0U7rbhMzbwbPWVkAZZPZDK4q7UcbyZ25dgZFlOno9oWh89ScmPbzMSLB9IkNmVsy94F4+H5exRSk6f

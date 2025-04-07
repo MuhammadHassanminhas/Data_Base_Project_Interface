@@ -136,6 +136,7 @@
             owner_menu.TabIndex = 2;
             owner_menu.Text = "MENU";
             owner_menu.UseVisualStyleBackColor = false;
+            owner_menu.Click += owner_menu_Click;
             // 
             // panel3
             // 
@@ -528,6 +529,7 @@
             owner_logout.TabIndex = 2;
             owner_logout.Text = "LOGOUT";
             owner_logout.UseVisualStyleBackColor = false;
+            owner_logout.Click += owner_logout_Click;
             // 
             // employee_menu_timer
             // 
@@ -556,6 +558,7 @@
             Controls.Add(flowLayoutPanel1);
             ForeColor = Color.FromArgb(255, 136, 183);
             Name = "owner_dash_board";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "owner_dash_board";
             Load += owner_dash_board_Load;
             flowLayoutPanel1.ResumeLayout(false);

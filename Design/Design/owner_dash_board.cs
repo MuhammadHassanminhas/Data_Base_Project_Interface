@@ -130,5 +130,21 @@ namespace Design
         {
             load_form_obj(new owner_client_data());
         }
+
+        private void owner_menu_Click(object sender, EventArgs e)
+        {
+            sign_up_main loginForm = new sign_up_main();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
+        }
+
+        private void owner_logout_Click(object sender, EventArgs e)
+        {
+            owner_login loginForm = new owner_login();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
+        }
     }
 }

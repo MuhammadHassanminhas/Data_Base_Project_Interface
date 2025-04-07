@@ -67,6 +67,7 @@ namespace Design
             this.Hide();
             loginForm.ShowDialog();
             this.Show();
+
         }
     }
 }

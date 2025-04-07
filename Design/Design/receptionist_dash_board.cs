@@ -46,5 +46,21 @@ namespace Design
         {
             load_form_obj(new receptionist_view_client_data());
         }
+
+        private void owner_menu_Click(object sender, EventArgs e)
+        {
+            sign_up_main loginForm = new sign_up_main();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            receptionist_login loginForm = new receptionist_login();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
+        }
     }
 }

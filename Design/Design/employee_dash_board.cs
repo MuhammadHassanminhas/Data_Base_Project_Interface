@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class employee_dash_board: Form
+    public partial class employee_dash_board : Form
     {
         public employee_dash_board()
         {
             InitializeComponent();
+        }
+
+        private void employee_logout_Click(object sender, EventArgs e)
+        {
+            employee loginForm = new employee();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Show();
         }
     }
 }
