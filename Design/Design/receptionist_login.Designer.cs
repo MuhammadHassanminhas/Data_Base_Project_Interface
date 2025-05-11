@@ -53,9 +53,10 @@
             panel1.Controls.Add(enterloginpassword);
             panel1.Controls.Add(textBox_login_password);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(421, 28);
+            panel1.Location = new Point(481, 37);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(549, 610);
+            panel1.Size = new Size(627, 813);
             panel1.TabIndex = 2;
             // 
             // show_button
@@ -67,9 +68,10 @@
             show_button.FlatAppearance.MouseDownBackColor = Color.Transparent;
             show_button.FlatAppearance.MouseOverBackColor = Color.Transparent;
             show_button.FlatStyle = FlatStyle.Flat;
-            show_button.Location = new Point(433, 342);
+            show_button.Location = new Point(495, 456);
+            show_button.Margin = new Padding(3, 4, 3, 4);
             show_button.Name = "show_button";
-            show_button.Size = new Size(33, 39);
+            show_button.Size = new Size(38, 52);
             show_button.TabIndex = 7;
             show_button.UseVisualStyleBackColor = false;
             show_button.Click += show_button_Click;
@@ -83,9 +85,10 @@
             hide_button.FlatAppearance.MouseDownBackColor = Color.Transparent;
             hide_button.FlatAppearance.MouseOverBackColor = Color.Transparent;
             hide_button.FlatStyle = FlatStyle.Flat;
-            hide_button.Location = new Point(433, 342);
+            hide_button.Location = new Point(495, 456);
+            hide_button.Margin = new Padding(3, 4, 3, 4);
             hide_button.Name = "hide_button";
-            hide_button.Size = new Size(33, 39);
+            hide_button.Size = new Size(38, 52);
             hide_button.TabIndex = 6;
             hide_button.UseVisualStyleBackColor = false;
             hide_button.Click += hide_button_Click;
@@ -95,9 +98,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Cambria", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(255, 136, 183);
-            label1.Location = new Point(198, 446);
+            label1.Location = new Point(226, 595);
             label1.Name = "label1";
-            label1.Size = new Size(153, 22);
+            label1.Size = new Size(190, 28);
             label1.TabIndex = 5;
             label1.Text = "Forgot Password?";
             // 
@@ -110,9 +113,10 @@
             receptionist_login_up_button.FlatStyle = FlatStyle.Flat;
             receptionist_login_up_button.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             receptionist_login_up_button.ForeColor = Color.White;
-            receptionist_login_up_button.Location = new Point(140, 517);
+            receptionist_login_up_button.Location = new Point(160, 689);
+            receptionist_login_up_button.Margin = new Padding(3, 4, 3, 4);
             receptionist_login_up_button.Name = "receptionist_login_up_button";
-            receptionist_login_up_button.Size = new Size(269, 48);
+            receptionist_login_up_button.Size = new Size(307, 73);
             receptionist_login_up_button.TabIndex = 4;
             receptionist_login_up_button.Text = "Login";
             receptionist_login_up_button.UseVisualStyleBackColor = false;
@@ -122,19 +126,20 @@
             // 
             enterloginpassword.AutoSize = true;
             enterloginpassword.Font = new Font("Cambria", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            enterloginpassword.Location = new Point(174, 399);
+            enterloginpassword.Location = new Point(199, 532);
             enterloginpassword.Name = "enterloginpassword";
-            enterloginpassword.Size = new Size(200, 22);
+            enterloginpassword.Size = new Size(250, 28);
             enterloginpassword.TabIndex = 3;
             enterloginpassword.Text = "Enter Login Password";
             // 
             // textBox_login_password
             // 
             textBox_login_password.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox_login_password.Location = new Point(122, 342);
+            textBox_login_password.Location = new Point(139, 456);
+            textBox_login_password.Margin = new Padding(3, 4, 3, 4);
             textBox_login_password.Name = "textBox_login_password";
             textBox_login_password.PasswordChar = '*';
-            textBox_login_password.Size = new Size(305, 39);
+            textBox_login_password.Size = new Size(348, 47);
             textBox_login_password.TabIndex = 2;
             // 
             // panel2
@@ -142,9 +147,10 @@
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Zoom;
             panel2.Controls.Add(owner_heading_main);
-            panel2.Location = new Point(37, 25);
+            panel2.Location = new Point(42, 33);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(474, 274);
+            panel2.Size = new Size(542, 365);
             panel2.TabIndex = 1;
             // 
             // owner_heading_main
@@ -153,9 +159,9 @@
             owner_heading_main.BackColor = Color.Transparent;
             owner_heading_main.Font = new Font("Cambria", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             owner_heading_main.ForeColor = Color.FromArgb(255, 136, 183);
-            owner_heading_main.Location = new Point(9, 133);
+            owner_heading_main.Location = new Point(-14, 177);
             owner_heading_main.Name = "owner_heading_main";
-            owner_heading_main.Size = new Size(457, 57);
+            owner_heading_main.Size = new Size(569, 70);
             owner_heading_main.TabIndex = 0;
             owner_heading_main.Text = "  Receptionist Login";
             owner_heading_main.Click += owner_heading_main_Click;
@@ -171,22 +177,24 @@
             back_button.FlatAppearance.MouseOverBackColor = Color.Transparent;
             back_button.FlatStyle = FlatStyle.Flat;
             back_button.ForeColor = Color.Transparent;
-            back_button.Location = new Point(12, 12);
+            back_button.Location = new Point(14, 16);
+            back_button.Margin = new Padding(3, 4, 3, 4);
             back_button.Name = "back_button";
-            back_button.Size = new Size(37, 39);
+            back_button.Size = new Size(42, 52);
             back_button.TabIndex = 3;
             back_button.UseVisualStyleBackColor = false;
             back_button.Click += back_button_Click;
             // 
             // receptionist_login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1391, 666);
+            ClientSize = new Size(1590, 888);
             Controls.Add(panel1);
             Controls.Add(back_button);
             DoubleBuffered = true;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "receptionist_login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "receptionist_login";
