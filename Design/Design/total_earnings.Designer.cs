@@ -1,4 +1,6 @@
-﻿namespace Design
+﻿using System.Security.Cryptography.Xml;
+
+namespace Design
 {
     partial class total_earnings
     {
@@ -29,180 +31,213 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(total_earnings));
-            panel1 = new Panel();
-            label4 = new Label();
-            textBox9 = new TextBox();
-            label8 = new Label();
-            textBox8 = new TextBox();
-            label9 = new Label();
-            textBox5 = new TextBox();
-            label6 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            service_name = new TextBox();
-            label2 = new Label();
+            panel = new Panel();
+            net_income = new Label();
+            revenue = new Label();
+            salary = new Label();
+            total_services = new Label();
+            tips = new Label();
+            display = new Button();
             dateTimePicker1 = new DateTimePicker();
-            panel1.SuspendLayout();
+            label4 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label6 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            panel.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panel
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox9);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(textBox8);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(service_name);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(21, 137);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1055, 314);
-            panel1.TabIndex = 1;
+            panel.BackColor = Color.White;
+            panel.Controls.Add(net_income);
+            panel.Controls.Add(revenue);
+            panel.Controls.Add(salary);
+            panel.Controls.Add(total_services);
+            panel.Controls.Add(tips);
+            panel.Controls.Add(display);
+            panel.Controls.Add(dateTimePicker1);
+            panel.Controls.Add(label4);
+            panel.Controls.Add(label8);
+            panel.Controls.Add(label9);
+            panel.Controls.Add(label6);
+            panel.Controls.Add(label3);
+            panel.Controls.Add(label2);
+            panel.Location = new Point(24, 183);
+            panel.Margin = new Padding(3, 4, 3, 4);
+            panel.Name = "panel";
+            panel.Size = new Size(1206, 419);
+            panel.TabIndex = 1;
+            // 
+            // net_income
+            // 
+            net_income.AutoSize = true;
+            net_income.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            net_income.Location = new Point(874, 285);
+            net_income.ForeColor = Color.FromArgb(0, 0, 0);
+            net_income.Name = "net_income";
+            net_income.Size = new Size(0, 31);
+            net_income.TabIndex = 32;
+            // 
+            // revenue
+            // 
+            revenue.AutoSize = true;
+            revenue.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            revenue.Location = new Point(311, 285);
+            revenue.ForeColor = Color.FromArgb(0, 0, 0);
+            revenue.Name = "revenue";
+            revenue.Size = new Size(0, 31);
+            revenue.TabIndex = 31;
+            // 
+            // salary
+            // 
+            salary.AutoSize = true;
+            salary.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            salary.Location = new Point(983, 155);
+            salary.ForeColor = Color.FromArgb(0, 0, 0);
+            salary.Name = "salary";
+            salary.Size = new Size(0, 31);
+            salary.TabIndex = 30;
+            // 
+            // total_services
+            // 
+            total_services.AutoSize = true;
+            total_services.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            total_services.Location = new Point(436, 155);
+            total_services.ForeColor = Color.FromArgb(0, 0, 0);
+            total_services.Name = "total_services";
+            total_services.Size = new Size(0, 31);
+            total_services.TabIndex = 29;
+            // 
+            // tips
+            // 
+            tips.AutoSize = true;
+            tips.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tips.Location = new Point(845, 42);
+            tips.ForeColor = Color.FromArgb(0, 0, 0);
+            tips.Name = "tips";
+            tips.Size = new Size(0, 31);
+            tips.TabIndex = 28;
+            // 
+            // display
+            // 
+            display.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            display.Location = new Point(558, 362);
+            display.Name = "display";
+            display.Size = new Size(155, 36);
+            display.ForeColor = Color.FromArgb(0, 0, 0);
+            display.TabIndex = 27;
+            display.Text = "Display Data";
+            display.UseVisualStyleBackColor = true;
+            display.Click += button1_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(189, 39);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(247, 27);
+            dateTimePicker1.TabIndex = 26;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(255, 136, 183);
-            label4.Location = new Point(607, 230);
+            label4.Location = new Point(694, 287);
             label4.Name = "label4";
-            label4.Size = new Size(131, 22);
+            label4.Size = new Size(164, 29);
             label4.TabIndex = 25;
             label4.Text = "NET INCOME";
-            // 
-            // textBox9
-            // 
-            textBox9.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox9.Location = new Point(820, 219);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(206, 40);
-            textBox9.TabIndex = 24;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(255, 136, 183);
-            label8.Location = new Point(59, 30);
+            label8.Location = new Point(54, 39);
             label8.Name = "label8";
-            label8.Size = new Size(81, 22);
+            label8.Size = new Size(101, 29);
             label8.TabIndex = 18;
             label8.Text = "MONTH";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(842, 125);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(206, 23);
-            textBox8.TabIndex = 17;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label9.ForeColor = Color.FromArgb(255, 136, 183);
-            label9.Location = new Point(617, 126);
+            label9.Location = new Point(694, 157);
             label9.Name = "label9";
-            label9.Size = new Size(219, 22);
+            label9.Size = new Size(274, 29);
             label9.TabIndex = 16;
             label9.Text = "EMPLOYEE SALARIES";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(319, 218);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(206, 23);
-            textBox5.TabIndex = 11;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(255, 136, 183);
-            label6.Location = new Point(47, 215);
+            label6.Location = new Point(54, 287);
             label6.Name = "label6";
-            label6.Size = new Size(190, 22);
+            label6.Size = new Size(240, 29);
             label6.TabIndex = 10;
             label6.Text = "SERVICE REVENUE";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(709, 33);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(206, 23);
-            textBox2.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(255, 136, 183);
-            label3.Location = new Point(626, 34);
+            label3.Location = new Point(716, 44);
             label3.Name = "label3";
-            label3.Size = new Size(54, 22);
+            label3.Size = new Size(67, 29);
             label3.TabIndex = 8;
             label3.Text = "TIPS";
-            // 
-            // service_name
-            // 
-            service_name.Location = new Point(393, 121);
-            service_name.Name = "service_name";
-            service_name.Size = new Size(206, 23);
-            service_name.TabIndex = 5;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(255, 136, 183);
-            label2.Location = new Point(47, 118);
+            label2.Location = new Point(54, 157);
             label2.Name = "label2";
-            label2.Size = new Size(297, 22);
+            label2.Size = new Size(370, 29);
             label2.TabIndex = 4;
             label2.Text = "TOTAL SERVICES PER MONTH";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(165, 29);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 26;
+            label2.Click += label2_Click;
             // 
             // total_earnings
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1096, 588);
-            Controls.Add(panel1);
+            ClientSize = new Size(1253, 784);
+            Controls.Add(panel);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "total_earnings";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel.ResumeLayout(false);
+            panel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panel;
         private Label label4;
-        private TextBox textBox9;
         private Label label8;
-        private TextBox textBox8;
         private Label label9;
-        private TextBox textBox5;
         private Label label6;
-        private TextBox textBox2;
         private Label label3;
-        private TextBox service_name;
         private Label label2;
         private DateTimePicker dateTimePicker1;
+        private Button display;
+        private Label tips;
+        private Label net_income;
+        private Label revenue;
+        private Label salary;
+        private Label total_services;
     }
 }
