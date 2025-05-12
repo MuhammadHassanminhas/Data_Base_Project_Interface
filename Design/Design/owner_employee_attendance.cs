@@ -16,7 +16,7 @@ namespace Design
     public partial class owner_employee_attendance : Form
     {
         string connString = "server=localhost;uid=root;pwd=root;database=beauty_salon;";
-
+        
         public owner_employee_attendance()
         {
             InitializeComponent();
