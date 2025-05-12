@@ -19,9 +19,26 @@ namespace Design
         {
             InitializeComponent();
             LoadEmployees();
-            position_dropdown.Items.AddRange(new string[] { "Hair Stylist", "Receptionist", "Manager" });
+            LoadPositions();
             employee_dataGridView.CellClick += employee_dataGridView_CellClick;
 
+        }
+        private void LoadPositions()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT DISTINCT Role FROM Staff", conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    position_dropdown.Items.Add(reader["Role"].ToString());
+                }
+
+                reader.Close();
+            }
         }
 
         private void employee_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,7 +71,6 @@ namespace Design
         }
         private void owner_employee_data_Load(object sender, EventArgs e)
         {
-
         }
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
