@@ -19,6 +19,19 @@ namespace Design
         public services()
         {
             InitializeComponent();
+            SERVICE_dataGridView.CellClick += service_dataGridView_CellClick;
+        }
+
+        private void service_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = SERVICE_dataGridView.Rows[e.RowIndex];
+                service_id.Text = row.Cells["Service_ID"].Value.ToString();
+                service_name.Text = row.Cells["Name"].Value.ToString();
+                service_price.Text = row.Cells["Price"].Value.ToString();
+                service_duration.Text = row.Cells["Duration"].Value.ToString();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -84,7 +97,7 @@ namespace Design
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                STOCK_dataGridView.DataSource = dt;
+                SERVICE_dataGridView.DataSource = dt;
             }
         }
 

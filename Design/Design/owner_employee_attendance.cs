@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace Design
 {
@@ -18,6 +20,20 @@ namespace Design
         public owner_employee_attendance()
         {
             InitializeComponent();
+            attendence_dataGridView.CellClick += attendance_dataGridView_CellClick;
+        }
+
+        private void attendance_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = attendence_dataGridView.Rows[e.RowIndex];
+                emp_id.Text = row.Cells["Staff_ID"].Value.ToString();
+                emp_name.Text = row.Cells["Staff_Name"].Value.ToString();
+                position_category.Text = row.Cells["Role"].Value.ToString();
+                status_category.Text = row.Cells["Status"].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(row.Cells["Attendance_Date"].Value);
+            }
         }
 
         private void owner_employee_attendance_Load(object sender, EventArgs e)

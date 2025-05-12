@@ -34,7 +34,7 @@
             label3 = new Label();
             service_duration = new TextBox();
             label1 = new Label();
-            STOCK_dataGridView = new DataGridView();
+            SERVICE_dataGridView = new DataGridView();
             DELETE_BUTTON = new Button();
             EDIT_BUTTON = new Button();
             ADD_BUTTON = new Button();
@@ -43,7 +43,7 @@
             service_name = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)STOCK_dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SERVICE_dataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -53,7 +53,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(service_duration);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(STOCK_dataGridView);
+            panel1.Controls.Add(SERVICE_dataGridView);
             panel1.Controls.Add(DELETE_BUTTON);
             panel1.Controls.Add(EDIT_BUTTON);
             panel1.Controls.Add(ADD_BUTTON);
@@ -106,16 +106,16 @@
             label1.TabIndex = 15;
             label1.Text = "DURATION";
             // 
-            // STOCK_dataGridView
+            // SERVICE_dataGridView
             // 
-            STOCK_dataGridView.BackgroundColor = Color.FromArgb(253, 210, 227);
-            STOCK_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            STOCK_dataGridView.Location = new Point(466, 35);
-            STOCK_dataGridView.Margin = new Padding(3, 4, 3, 4);
-            STOCK_dataGridView.Name = "STOCK_dataGridView";
-            STOCK_dataGridView.RowHeadersWidth = 51;
-            STOCK_dataGridView.Size = new Size(717, 659);
-            STOCK_dataGridView.TabIndex = 14;
+            SERVICE_dataGridView.BackgroundColor = Color.FromArgb(253, 210, 227);
+            SERVICE_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            SERVICE_dataGridView.Location = new Point(466, 35);
+            SERVICE_dataGridView.Margin = new Padding(3, 4, 3, 4);
+            SERVICE_dataGridView.Name = "SERVICE_dataGridView";
+            SERVICE_dataGridView.RowHeadersWidth = 51;
+            SERVICE_dataGridView.Size = new Size(717, 659);
+            SERVICE_dataGridView.TabIndex = 14;
             // 
             // DELETE_BUTTON
             // 
@@ -223,14 +223,14 @@
             Load += services_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)STOCK_dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SERVICE_dataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private DataGridView STOCK_dataGridView;
+        private DataGridView SERVICE_dataGridView;
         private Button DELETE_BUTTON;
         private Button EDIT_BUTTON;
         private Button ADD_BUTTON;

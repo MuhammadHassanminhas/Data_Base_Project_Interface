@@ -19,6 +19,19 @@ namespace Design
         public stock_owner()
         {
             InitializeComponent();
+            STOCK_dataGridView.CellClick += stock_dataGridView_CellClick;
+        }
+
+        private void stock_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = STOCK_dataGridView.Rows[e.RowIndex];
+                stock_ID.Text = row.Cells["Product_ID"].Value.ToString();
+                stock_name.Text = row.Cells["Product_Name"].Value.ToString();
+                stock_quantity.Text = row.Cells["Quantity"].Value.ToString();
+                stock_price.Text = row.Cells["Price"].Value.ToString();
+            }
         }
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
