@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(owner_employee_data));
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            emp_address = new TextBox();
+            label6 = new Label();
+            emp_contact = new TextBox();
+            emp_cnic = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            attendence_dataGridView = new DataGridView();
+            employee_dataGridView = new DataGridView();
             DELETE_BUTTON = new Button();
             EDIT_BUTTON = new Button();
             ADD_BUTTON = new Button();
@@ -45,17 +47,19 @@
             emp_name = new TextBox();
             label2 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)employee_dataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(emp_address);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(emp_contact);
+            panel1.Controls.Add(emp_cnic);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(attendence_dataGridView);
+            panel1.Controls.Add(employee_dataGridView);
             panel1.Controls.Add(DELETE_BUTTON);
             panel1.Controls.Add(EDIT_BUTTON);
             panel1.Controls.Add(ADD_BUTTON);
@@ -71,13 +75,40 @@
             panel1.Size = new Size(1206, 721);
             panel1.TabIndex = 3;
             // 
-            // textBox1
+            // emp_address
             // 
-            textBox1.Location = new Point(158, 212);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 27);
-            textBox1.TabIndex = 18;
+            emp_address.Location = new Point(703, 212);
+            emp_address.Margin = new Padding(3, 4, 3, 4);
+            emp_address.Name = "emp_address";
+            emp_address.Size = new Size(235, 27);
+            emp_address.TabIndex = 21;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(255, 136, 183);
+            label6.Location = new Point(570, 210);
+            label6.Name = "label6";
+            label6.Size = new Size(129, 29);
+            label6.TabIndex = 20;
+            label6.Text = "ADDRESS";
+            // 
+            // emp_contact
+            // 
+            emp_contact.Location = new Point(703, 144);
+            emp_contact.Margin = new Padding(3, 4, 3, 4);
+            emp_contact.Name = "emp_contact";
+            emp_contact.Size = new Size(235, 27);
+            emp_contact.TabIndex = 19;
+            // 
+            // emp_cnic
+            // 
+            emp_cnic.Location = new Point(158, 212);
+            emp_cnic.Margin = new Padding(3, 4, 3, 4);
+            emp_cnic.Name = "emp_cnic";
+            emp_cnic.Size = new Size(235, 27);
+            emp_cnic.TabIndex = 18;
             // 
             // label3
             // 
@@ -101,26 +132,16 @@
             label1.TabIndex = 16;
             label1.Text = "CONTACT";
             // 
-            // comboBox1
+            // employee_dataGridView
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(703, 143);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(235, 28);
-            comboBox1.TabIndex = 15;
-            comboBox1.Text = "SELECT";
-            // 
-            // attendence_dataGridView
-            // 
-            attendence_dataGridView.BackgroundColor = Color.FromArgb(253, 210, 227);
-            attendence_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            attendence_dataGridView.Location = new Point(23, 433);
-            attendence_dataGridView.Margin = new Padding(3, 4, 3, 4);
-            attendence_dataGridView.Name = "attendence_dataGridView";
-            attendence_dataGridView.RowHeadersWidth = 51;
-            attendence_dataGridView.Size = new Size(1160, 284);
-            attendence_dataGridView.TabIndex = 14;
+            employee_dataGridView.BackgroundColor = Color.FromArgb(253, 210, 227);
+            employee_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            employee_dataGridView.Location = new Point(23, 433);
+            employee_dataGridView.Margin = new Padding(3, 4, 3, 4);
+            employee_dataGridView.Name = "employee_dataGridView";
+            employee_dataGridView.RowHeadersWidth = 51;
+            employee_dataGridView.Size = new Size(1160, 284);
+            employee_dataGridView.TabIndex = 14;
             // 
             // DELETE_BUTTON
             // 
@@ -138,6 +159,7 @@
             DELETE_BUTTON.TabIndex = 12;
             DELETE_BUTTON.Text = "DELETE";
             DELETE_BUTTON.UseVisualStyleBackColor = false;
+            DELETE_BUTTON.Click += DELETE_BUTTON_Click;
             // 
             // EDIT_BUTTON
             // 
@@ -155,6 +177,7 @@
             EDIT_BUTTON.TabIndex = 11;
             EDIT_BUTTON.Text = "SAVE";
             EDIT_BUTTON.UseVisualStyleBackColor = false;
+            EDIT_BUTTON.Click += EDIT_BUTTON_Click;
             // 
             // ADD_BUTTON
             // 
@@ -247,7 +270,7 @@
             Load += owner_employee_data_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)employee_dataGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -256,7 +279,7 @@
         private Panel panel1;
         private Label label1;
         private ComboBox comboBox1;
-        private DataGridView attendence_dataGridView;
+        private DataGridView employee_dataGridView;
         private Button DELETE_BUTTON;
         private Button EDIT_BUTTON;
         private Button ADD_BUTTON;
@@ -266,7 +289,10 @@
         private ComboBox position_dropdown;
         private TextBox emp_name;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox emp_cnic;
         private Label label3;
+        private TextBox emp_contact;
+        private Label label6;
+        private TextBox emp_address;
     }
 }
