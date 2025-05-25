@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(owner_employee_pay_check));
             panel1 = new Panel();
-            netsalary = new Label();
-            deduction = new Label();
-            tips = new Label();
-            absents = new Label();
-            salaryperday = new Label();
-            name = new Label();
+            net_salary = new TextBox();
+            deduction = new TextBox();
+            tips = new TextBox();
+            absents = new TextBox();
+            salary = new TextBox();
+            name = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             label4 = new Label();
             CALCULATE = new Button();
@@ -48,17 +48,19 @@
             id = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(netsalary);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(net_salary);
             panel1.Controls.Add(deduction);
             panel1.Controls.Add(tips);
             panel1.Controls.Add(absents);
-            panel1.Controls.Add(salaryperday);
+            panel1.Controls.Add(salary);
             panel1.Controls.Add(name);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label4);
@@ -79,59 +81,53 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // netsalary
+            // net_salary
             // 
-            netsalary.AutoSize = true;
-            netsalary.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            netsalary.Location = new Point(942, 379);
-            netsalary.Name = "netsalary";
-            netsalary.Size = new Size(0, 31);
-            netsalary.TabIndex = 32;
+            net_salary.Location = new Point(927, 379);
+            net_salary.Margin = new Padding(3, 4, 3, 4);
+            net_salary.Name = "net_salary";
+            net_salary.Size = new Size(235, 27);
+            net_salary.TabIndex = 38;
             // 
             // deduction
             // 
-            deduction.AutoSize = true;
-            deduction.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            deduction.Location = new Point(931, 225);
+            deduction.Location = new Point(927, 228);
+            deduction.Margin = new Padding(3, 4, 3, 4);
             deduction.Name = "deduction";
-            deduction.Size = new Size(0, 31);
-            deduction.TabIndex = 31;
+            deduction.Size = new Size(235, 27);
+            deduction.TabIndex = 37;
             // 
             // tips
             // 
-            tips.AutoSize = true;
-            tips.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tips.Location = new Point(491, 224);
+            tips.Location = new Point(508, 227);
+            tips.Margin = new Padding(3, 4, 3, 4);
             tips.Name = "tips";
-            tips.Size = new Size(0, 31);
-            tips.TabIndex = 30;
+            tips.Size = new Size(235, 27);
+            tips.TabIndex = 36;
             // 
             // absents
             // 
-            absents.AutoSize = true;
-            absents.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            absents.Location = new Point(155, 222);
+            absents.Location = new Point(144, 224);
+            absents.Margin = new Padding(3, 4, 3, 4);
             absents.Name = "absents";
-            absents.Size = new Size(0, 31);
-            absents.TabIndex = 29;
+            absents.Size = new Size(235, 27);
+            absents.TabIndex = 35;
             // 
-            // salaryperday
+            // salary
             // 
-            salaryperday.AutoSize = true;
-            salaryperday.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            salaryperday.Location = new Point(962, 39);
-            salaryperday.Name = "salaryperday";
-            salaryperday.Size = new Size(0, 31);
-            salaryperday.TabIndex = 28;
+            salary.Location = new Point(882, 41);
+            salary.Margin = new Padding(3, 4, 3, 4);
+            salary.Name = "salary";
+            salary.Size = new Size(235, 27);
+            salary.TabIndex = 34;
             // 
             // name
             // 
-            name.AutoSize = true;
-            name.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            name.Location = new Point(515, 40);
+            name.Location = new Point(508, 39);
+            name.Margin = new Padding(3, 4, 3, 4);
             name.Name = "name";
-            name.Size = new Size(0, 31);
-            name.TabIndex = 27;
+            name.Size = new Size(235, 27);
+            name.TabIndex = 33;
             // 
             // dateTimePicker1
             // 
@@ -215,11 +211,12 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(255, 136, 183);
-            label5.Location = new Point(418, 225);
+            label5.Location = new Point(418, 222);
             label5.Name = "label5";
             label5.Size = new Size(67, 29);
             label5.TabIndex = 12;
             label5.Text = "TIPS";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -237,11 +234,11 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(255, 136, 183);
-            label3.Location = new Point(723, 41);
+            label3.Location = new Point(767, 42);
             label3.Name = "label3";
-            label3.Size = new Size(219, 29);
+            label3.Size = new Size(109, 29);
             label3.TabIndex = 8;
-            label3.Text = "SALARY PER DAY";
+            label3.Text = "SALARY";
             // 
             // id
             // 
@@ -272,6 +269,24 @@
             label2.Size = new Size(84, 29);
             label2.TabIndex = 4;
             label2.Text = "NAME";
+            // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.BackColor = Color.FromArgb(255, 136, 183);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 136, 183);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(925, 525);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(237, 60);
+            button1.TabIndex = 39;
+            button1.Text = "CLEAR FIELDS";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // owner_employee_pay_check
             // 
@@ -305,10 +320,12 @@
         private Label label4;
         private DateTimePicker dateTimePicker1;
         private Label netsalary;
-        private Label deduction;
-        private Label tips;
-        private Label absents;
-        private Label salaryperday;
-        private Label name;
+        private TextBox salary;
+        private TextBox absents;
+        private TextBox name;
+        private TextBox deduction;
+        private TextBox tips;
+        private TextBox net_salary;
+        private Button button1;
     }
 }

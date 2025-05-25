@@ -76,7 +76,7 @@ namespace Design
             else
             {
                 records_menu_container.Height -= 10;
-                if (records_menu_container.Height <= 43)
+                if (records_menu_container.Height <= 49)
                 {
                     record_menu_timer.Stop();
                     record_menu_expand = false;
@@ -145,6 +145,11 @@ namespace Design
             this.Hide();
             loginForm.ShowDialog();
             this.Show();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

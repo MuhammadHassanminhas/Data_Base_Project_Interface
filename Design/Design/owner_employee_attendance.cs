@@ -21,6 +21,8 @@ namespace Design
         {
             InitializeComponent();
             attendence_dataGridView.CellClick += attendance_dataGridView_CellClick;
+            position_category.SelectedIndex = -1;
+            status_category.SelectedIndex = -1;
         }
 
         private void attendance_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -28,11 +30,28 @@ namespace Design
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = attendence_dataGridView.Rows[e.RowIndex];
-                emp_id.Text = row.Cells["Staff_ID"].Value.ToString();
-                emp_name.Text = row.Cells["Staff_Name"].Value.ToString();
-                position_category.Text = row.Cells["Role"].Value.ToString();
-                status_category.Text = row.Cells["Status"].Value.ToString();
-                dateTimePicker1.Value = Convert.ToDateTime(row.Cells["Attendance_Date"].Value);
+
+                if (row.IsNewRow)
+                {
+                    // Clear all fields if the empty new row is clicked
+                    emp_id.Clear();
+                    emp_name.Clear();
+                    position_category.SelectedIndex = -1;
+                    status_category.SelectedIndex = -1;
+                    dateTimePicker1.Value = DateTime.Today; // or a default value of your choice
+                }
+                else
+                {
+                    emp_id.Text = row.Cells["Staff_ID"].Value?.ToString();
+                    emp_name.Text = row.Cells["Staff_Name"].Value?.ToString();
+                    position_category.Text = row.Cells["Role"].Value?.ToString();
+                    status_category.Text = row.Cells["Status"].Value?.ToString();
+
+                    if (row.Cells["Attendance_Date"].Value != null && DateTime.TryParse(row.Cells["Attendance_Date"].Value.ToString(), out DateTime date))
+                    {
+                        dateTimePicker1.Value = date;
+                    }
+                }
             }
         }
 
@@ -73,19 +92,42 @@ namespace Design
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            try
             {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("InsertAttendance", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand("InsertAttendance", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@p_StaffID", Convert.ToInt32(emp_id.Text));
-                cmd.Parameters.AddWithValue("@p_Status", status_category.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@p_AttendanceDate", dateTimePicker1.Value.Date);
+                    cmd.Parameters.AddWithValue("@p_StaffID", Convert.ToInt32(emp_id.Text));
+                    cmd.Parameters.AddWithValue("@p_Status", status_category.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@p_AttendanceDate", dateTimePicker1.Value.Date);
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Attendance added successfully.");
-                LoadAttendanceData();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Attendance added successfully.");
+                    LoadAttendanceData();
+                }
+
+                emp_name.Clear();
+                emp_id.Clear();
+                position_category.SelectedIndex = -1;
+                status_category.SelectedIndex = -1;
+            }
+            catch (MySqlException ex)
+            {
+                if (ex.Message.Contains("Attendance already recorded"))
+                {
+                    MessageBox.Show("Error: Attendance has already been recorded for this employee on the selected date.");
+                }
+                else if (ex.Message.Contains("Invalid attendance status"))
+                {
+                    MessageBox.Show("Error: Please select a valid attendance status (Present, Absent, or Leave).");
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
             }
         }
 
@@ -111,6 +153,10 @@ namespace Design
             {
                 MessageBox.Show("Please select a row to delete.");
             }
+            emp_name.Clear();
+            emp_id.Clear();
+            position_category.SelectedIndex = -1;
+            status_category.SelectedIndex = -1;
         }
 
         private void EDIT_BUTTON_Click(object sender, EventArgs e)
@@ -138,6 +184,10 @@ namespace Design
             {
                 MessageBox.Show("Select a record to update.");
             }
+            emp_name.Clear();
+            emp_id.Clear();
+            position_category.SelectedIndex = -1;
+            status_category.SelectedIndex = -1;
         }
     }
 }

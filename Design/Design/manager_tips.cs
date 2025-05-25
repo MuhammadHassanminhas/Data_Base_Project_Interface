@@ -20,6 +20,7 @@ namespace Design
             LoadTips();
             UpdateButtonStates();
             TIP_dataGridView.CellClick += TIP_dataGridView_CellClick;
+            service_category.SelectedIndex = -1;
         }
         private void TIP_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -51,7 +52,7 @@ namespace Design
                 return;
             }
 
-            int serviceId = (int)service_category.SelectedValue;
+            int serviceId = Convert.ToInt32(service_category.SelectedValue);
             DateTime date = dateTimePicker1.Value;
 
             try
@@ -75,6 +76,10 @@ namespace Design
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+            emp_name.Clear();
+            emp_id.Clear();
+            amount_tip.Clear();
+            service_category.SelectedIndex = -1;
         }
 
         private void EDIT_BUTTON_Click(object sender, EventArgs e)
@@ -97,9 +102,10 @@ namespace Design
                 MessageBox.Show("Please select a service category.");
                 return;
             }
+            int serviceId = Convert.ToInt32(service_category.SelectedValue);
 
             int tipId = Convert.ToInt32(TIP_dataGridView.SelectedRows[0].Cells["Tip_ID"].Value);
-            int serviceId = (int)service_category.SelectedValue;
+            //int serviceId = (int)service_category.SelectedValue;
             DateTime date = dateTimePicker1.Value;
 
             try
@@ -124,6 +130,10 @@ namespace Design
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+            emp_name.Clear();
+            emp_id.Clear();
+            amount_tip.Clear();
+            service_category.SelectedIndex = -1;
         }
 
         private void DELETE_BUTTON_Click(object sender, EventArgs e)
@@ -157,6 +167,10 @@ namespace Design
                 {
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
+                emp_name.Clear();
+                emp_id.Clear();
+                amount_tip.Clear();
+                service_category.SelectedIndex = -1;
             }
         }
         private void LoadTips()
@@ -216,15 +230,13 @@ namespace Design
             {
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("SELECT DISTINCT Name FROM Service", conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT Service_ID, Name FROM Service", conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
 
-                while (reader.Read())
-                {
-                    service_category.Items.Add(reader["Name"].ToString());
-                }
-
-                reader.Close();
+                service_category.DataSource = dt;
+                service_category.DisplayMember = "Name";      // What user sees
+                service_category.ValueMember = "Service_ID"; // The ID used internally
             }
         }
     }

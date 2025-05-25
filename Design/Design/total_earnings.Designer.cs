@@ -74,8 +74,8 @@ namespace Design
             // 
             net_income.AutoSize = true;
             net_income.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            net_income.Location = new Point(874, 285);
             net_income.ForeColor = Color.FromArgb(0, 0, 0);
+            net_income.Location = new Point(874, 285);
             net_income.Name = "net_income";
             net_income.Size = new Size(0, 31);
             net_income.TabIndex = 32;
@@ -84,8 +84,8 @@ namespace Design
             // 
             revenue.AutoSize = true;
             revenue.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            revenue.Location = new Point(311, 285);
             revenue.ForeColor = Color.FromArgb(0, 0, 0);
+            revenue.Location = new Point(311, 285);
             revenue.Name = "revenue";
             revenue.Size = new Size(0, 31);
             revenue.TabIndex = 31;
@@ -94,8 +94,8 @@ namespace Design
             // 
             salary.AutoSize = true;
             salary.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            salary.Location = new Point(983, 155);
             salary.ForeColor = Color.FromArgb(0, 0, 0);
+            salary.Location = new Point(983, 155);
             salary.Name = "salary";
             salary.Size = new Size(0, 31);
             salary.TabIndex = 30;
@@ -104,8 +104,8 @@ namespace Design
             // 
             total_services.AutoSize = true;
             total_services.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            total_services.Location = new Point(436, 155);
             total_services.ForeColor = Color.FromArgb(0, 0, 0);
+            total_services.Location = new Point(436, 155);
             total_services.Name = "total_services";
             total_services.Size = new Size(0, 31);
             total_services.TabIndex = 29;
@@ -114,8 +114,8 @@ namespace Design
             // 
             tips.AutoSize = true;
             tips.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tips.Location = new Point(845, 42);
             tips.ForeColor = Color.FromArgb(0, 0, 0);
+            tips.Location = new Point(845, 42);
             tips.Name = "tips";
             tips.Size = new Size(0, 31);
             tips.TabIndex = 28;
@@ -123,10 +123,10 @@ namespace Design
             // display
             // 
             display.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            display.Location = new Point(558, 362);
+            display.ForeColor = Color.FromArgb(0, 0, 0);
+            display.Location = new Point(542, 362);
             display.Name = "display";
             display.Size = new Size(155, 36);
-            display.ForeColor = Color.FromArgb(0, 0, 0);
             display.TabIndex = 27;
             display.Text = "Display Data";
             display.UseVisualStyleBackColor = true;

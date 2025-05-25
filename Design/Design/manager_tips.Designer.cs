@@ -86,9 +86,9 @@
             label1.ForeColor = Color.FromArgb(255, 136, 183);
             label1.Location = new Point(16, 240);
             label1.Name = "label1";
-            label1.Size = new Size(139, 29);
+            label1.Size = new Size(118, 29);
             label1.TabIndex = 19;
-            label1.Text = "AMMOUNT";
+            label1.Text = "AMOUNT";
             // 
             // dateTimePicker1
             // 

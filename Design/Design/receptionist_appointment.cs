@@ -20,6 +20,7 @@ namespace Design
             InitializeComponent();
             LoadServices();
             LoadAppointments();
+            comboBox1.SelectedIndex = -1;
         }
 
         private void LoadServices()
@@ -104,6 +105,10 @@ namespace Design
                 {
                     MessageBox.Show("Error adding appointment:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                name.Clear();
+                contact.Clear();
+                emp_id.Clear();
+                comboBox1.SelectedIndex = -1;
             }
         }
     }

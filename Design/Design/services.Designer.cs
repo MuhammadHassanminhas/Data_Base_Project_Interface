@@ -32,8 +32,6 @@
             panel1 = new Panel();
             service_id = new TextBox();
             label3 = new Label();
-            service_duration = new TextBox();
-            label1 = new Label();
             SERVICE_dataGridView = new DataGridView();
             DELETE_BUTTON = new Button();
             EDIT_BUTTON = new Button();
@@ -51,8 +49,6 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(service_id);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(service_duration);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(SERVICE_dataGridView);
             panel1.Controls.Add(DELETE_BUTTON);
             panel1.Controls.Add(EDIT_BUTTON);
@@ -70,7 +66,7 @@
             // 
             // service_id
             // 
-            service_id.Location = new Point(158, 149);
+            service_id.Location = new Point(156, 210);
             service_id.Margin = new Padding(3, 4, 3, 4);
             service_id.Name = "service_id";
             service_id.Size = new Size(235, 27);
@@ -81,30 +77,11 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(255, 136, 183);
-            label3.Location = new Point(18, 149);
+            label3.Location = new Point(16, 210);
             label3.Name = "label3";
             label3.Size = new Size(37, 29);
             label3.TabIndex = 17;
             label3.Text = "ID";
-            // 
-            // service_duration
-            // 
-            service_duration.Location = new Point(158, 309);
-            service_duration.Margin = new Padding(3, 4, 3, 4);
-            service_duration.Name = "service_duration";
-            service_duration.Size = new Size(235, 27);
-            service_duration.TabIndex = 16;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 14.25F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(255, 136, 183);
-            label1.Location = new Point(16, 309);
-            label1.Name = "label1";
-            label1.Size = new Size(136, 29);
-            label1.TabIndex = 15;
-            label1.Text = "DURATION";
             // 
             // SERVICE_dataGridView
             // 
@@ -173,7 +150,7 @@
             // 
             // service_price
             // 
-            service_price.Location = new Point(159, 251);
+            service_price.Location = new Point(157, 312);
             service_price.Margin = new Padding(3, 4, 3, 4);
             service_price.Name = "service_price";
             service_price.Size = new Size(235, 27);
@@ -184,7 +161,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(255, 136, 183);
-            label4.Location = new Point(16, 251);
+            label4.Location = new Point(14, 312);
             label4.Name = "label4";
             label4.Size = new Size(86, 29);
             label4.TabIndex = 7;
@@ -192,7 +169,7 @@
             // 
             // service_name
             // 
-            service_name.Location = new Point(158, 191);
+            service_name.Location = new Point(156, 252);
             service_name.Margin = new Padding(3, 4, 3, 4);
             service_name.Name = "service_name";
             service_name.Size = new Size(235, 27);
@@ -203,7 +180,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 14.25F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(255, 136, 183);
-            label2.Location = new Point(16, 191);
+            label2.Location = new Point(14, 252);
             label2.Name = "label2";
             label2.Size = new Size(84, 29);
             label2.TabIndex = 2;
@@ -238,8 +215,6 @@
         private Label label4;
         private TextBox service_name;
         private Label label2;
-        private TextBox service_duration;
-        private Label label1;
         private TextBox service_id;
         private Label label3;
     }

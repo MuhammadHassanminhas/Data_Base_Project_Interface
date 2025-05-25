@@ -74,6 +74,11 @@ namespace Design
             }
 
             string password = emp_password.Text.Trim();
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter a password.");
+                return;
+            }
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlCommand cmd = new MySqlCommand("EmployeeLogin", conn))

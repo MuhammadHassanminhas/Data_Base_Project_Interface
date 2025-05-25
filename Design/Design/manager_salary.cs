@@ -29,6 +29,8 @@ namespace Design
             string nameParam = string.IsNullOrWhiteSpace(employeeName) ? null : employeeName;
 
             GetEmployeePaycheck(idParam, nameParam);
+            emp_id.Clear();
+            emp_name.Clear();
         }
         private void GetEmployeePaycheck(int? staffID, string staffName)
         {

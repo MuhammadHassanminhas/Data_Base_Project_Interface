@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -108,6 +109,7 @@ namespace Design
         {
             string searchName = name.Text.Trim();
             LoadAppointments(searchName);
+            name.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -121,6 +123,10 @@ namespace Design
                     printDocument.Print();
                 }
             }
+            name.Clear();
+            contact.Clear();
+            tip.Clear();
+            total_price.Clear();
         }
         private string GenerateBillText()
         {

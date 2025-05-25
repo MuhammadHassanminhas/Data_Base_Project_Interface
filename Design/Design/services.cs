@@ -30,7 +30,6 @@ namespace Design
                 service_id.Text = row.Cells["Service_ID"].Value.ToString();
                 service_name.Text = row.Cells["Name"].Value.ToString();
                 service_price.Text = row.Cells["Price"].Value.ToString();
-                service_duration.Text = row.Cells["Duration"].Value.ToString();
             }
         }
 
@@ -47,9 +46,11 @@ namespace Design
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@p_Name", service_name.Text);
                 cmd.Parameters.AddWithValue("@p_Price", Convert.ToDecimal(service_price.Text));
-                cmd.Parameters.AddWithValue("@p_Duration", Convert.ToInt16(service_duration.Text));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Service Added!");
+                service_id.Clear();
+                service_name.Clear();
+                service_price.Clear();
                 LoadServices();  // Refresh grid
             }
 
@@ -65,9 +66,11 @@ namespace Design
                 cmd.Parameters.AddWithValue("@p_ServiceID", Convert.ToInt32(service_id.Text));
                 cmd.Parameters.AddWithValue("@p_Name", service_name.Text);
                 cmd.Parameters.AddWithValue("@p_Price", Convert.ToDecimal(service_price.Text));
-                cmd.Parameters.AddWithValue("@p_Duration", Convert.ToInt16(service_duration.Text));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Service Updated!");
+                service_id.Clear();
+                service_name.Clear();
+                service_price.Clear();
                 LoadServices();
             }
 
@@ -83,6 +86,9 @@ namespace Design
                 cmd.Parameters.AddWithValue("@p_ServiceID", Convert.ToInt32(service_id.Text));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Service Deleted!");
+                service_id.Clear();
+                service_name.Clear();
+                service_price.Clear();
                 LoadServices();
             }
 

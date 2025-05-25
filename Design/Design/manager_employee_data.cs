@@ -73,6 +73,8 @@ namespace Design
                 {
                     MessageBox.Show("Error searching employees: " + ex.Message);
                 }
+                emp_id.Clear();
+                emp_name.Clear();
             }
         }
 

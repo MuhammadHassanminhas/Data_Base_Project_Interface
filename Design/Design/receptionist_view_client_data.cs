@@ -70,6 +70,8 @@ namespace Design
             string Contact = contact.Text.Trim();
 
             LoadClients(Name, Contact);
+            name.Clear();
+            contact.Clear();
         }
     }
 }

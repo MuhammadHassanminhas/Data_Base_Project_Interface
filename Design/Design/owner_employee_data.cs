@@ -21,6 +21,7 @@ namespace Design
             LoadEmployees();
             LoadPositions();
             employee_dataGridView.CellClick += employee_dataGridView_CellClick;
+            position_dropdown.SelectedIndex = -1;
 
         }
         private void LoadPositions()
@@ -75,22 +76,46 @@ namespace Design
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection conn = new MySqlConnection(connStr))
+            try
             {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("InsertEmployee", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("p_StaffID", Convert.ToInt32(emp_id.Text));
-                cmd.Parameters.AddWithValue("p_Name", emp_name.Text);
-                cmd.Parameters.AddWithValue("p_Role", position_dropdown.Text);
-                cmd.Parameters.AddWithValue("p_CNIC", emp_cnic.Text);
-                cmd.Parameters.AddWithValue("p_Address", emp_address.Text);
-                cmd.Parameters.AddWithValue("p_Contact", emp_contact.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Employee added!");
-                LoadEmployees();
+                using (MySqlConnection conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand("InsertEmployee", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("p_StaffID", Convert.ToInt32(emp_id.Text));
+                    cmd.Parameters.AddWithValue("p_Name", emp_name.Text);
+                    cmd.Parameters.AddWithValue("p_Role", position_dropdown.Text);
+                    cmd.Parameters.AddWithValue("p_CNIC", emp_cnic.Text);
+                    cmd.Parameters.AddWithValue("p_Address", emp_address.Text);
+                    cmd.Parameters.AddWithValue("p_Contact", emp_contact.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Employee added!");
+                    LoadEmployees();
+                }
+
+                emp_name.Clear();
+                emp_address.Clear();
+                emp_contact.Clear();
+                emp_cnic.Clear();
+                emp_id.Clear();
+                position_dropdown.SelectedIndex = -1;
+            }
+            catch (MySqlException ex)
+            {
+                if (ex.Message.Contains("Insert failed: Staff ID already exists"))
+                {
+                    MessageBox.Show("Error: This Staff ID already exists. Please use a different one.");
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
             }
         }
+
 
         private void EDIT_BUTTON_Click(object sender, EventArgs e)
         {
@@ -109,6 +134,12 @@ namespace Design
                 MessageBox.Show("Employee updated!");
                 LoadEmployees();
             }
+            emp_name.Clear();
+            emp_address.Clear();
+            emp_contact.Clear();
+            emp_cnic.Clear();
+            emp_id.Clear();
+            position_dropdown.SelectedIndex = -1;
         }
 
         private void DELETE_BUTTON_Click(object sender, EventArgs e)
@@ -123,6 +154,12 @@ namespace Design
                 MessageBox.Show("Employee deleted!");
                 LoadEmployees();
             }
+            emp_name.Clear();
+            emp_address.Clear();
+            emp_contact.Clear();
+            emp_cnic.Clear();
+            emp_id.Clear();
+            position_dropdown.SelectedIndex = -1;
         }
     }
 }

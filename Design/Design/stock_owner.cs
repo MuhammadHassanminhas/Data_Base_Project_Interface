@@ -58,6 +58,10 @@ namespace Design
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            stock_ID.Clear();
+            stock_quantity.Clear();
+            stock_price.Clear();
+            stock_name.Clear();
         }
 
         private void EDIT_BUTTON_Click(object sender, EventArgs e)
@@ -84,6 +88,10 @@ namespace Design
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            stock_ID.Clear();
+            stock_quantity.Clear();
+            stock_price.Clear();
+            stock_name.Clear();
         }
 
         private void DELETE_BUTTON_Click(object sender, EventArgs e)
@@ -107,6 +115,10 @@ namespace Design
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            stock_ID.Clear();
+            stock_quantity.Clear();
+            stock_price.Clear();
+            stock_name.Clear();
         }
 
         private void STOCK_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

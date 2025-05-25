@@ -42,11 +42,11 @@ namespace Design
                 if (reader.Read())
                 {
                     name.Text = reader["Name"].ToString();
-                    salaryperday.Text = reader["Salary_Per_Day"].ToString();
+                    salary.Text = reader["Salary"].ToString();
                     absents.Text = reader["Absents"].ToString();
                     tips.Text = reader["Tips"].ToString();
                     deduction.Text = reader["Deduction"].ToString();
-                    netsalary.Text = reader["Net_Salary"].ToString();
+                    net_salary.Text = reader["Net_Salary"].ToString();
                 }
                 else
                 {
@@ -55,6 +55,7 @@ namespace Design
 
                 reader.Close();
             }
+
         }
 
         private void ADD_BUTTON_Click(object sender, EventArgs e)
@@ -67,15 +68,38 @@ namespace Design
 
                 cmd.Parameters.AddWithValue("@p_StaffID", Convert.ToInt32(id.Text));
                 cmd.Parameters.AddWithValue("@p_PayPeriod", dateTimePicker1.Value.Date);
-                cmd.Parameters.AddWithValue("@p_Salary_Per_Day", Convert.ToDecimal(salaryperday.Text));
+                cmd.Parameters.AddWithValue("@p_Salary", Convert.ToDecimal(salary.Text));
                 cmd.Parameters.AddWithValue("@p_Absents", Convert.ToInt32(absents.Text));
                 cmd.Parameters.AddWithValue("@p_Tips", Convert.ToDecimal(tips.Text));
                 cmd.Parameters.AddWithValue("@p_Deduction", Convert.ToDecimal(deduction.Text));
-                cmd.Parameters.AddWithValue("@p_Net_Salary", Convert.ToDecimal(netsalary.Text));
+                cmd.Parameters.AddWithValue("@p_Net_Salary", Convert.ToDecimal(net_salary.Text));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Paycheck released successfully.");
             }
+            id.Clear();
+            name.Clear();
+            salary.Clear();
+            absents.Clear();
+            tips.Clear();
+            deduction.Clear();
+            net_salary.Clear();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            id.Clear();
+            name.Clear();
+            salary.Clear();
+            absents.Clear();
+            tips.Clear();
+            deduction.Clear();
+            net_salary.Clear();
         }
     }
 }
