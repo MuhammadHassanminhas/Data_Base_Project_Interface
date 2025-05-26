@@ -40,6 +40,7 @@
             panel2 = new Panel();
             label1 = new Label();
             back_button = new Button();
+            close_button = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -186,14 +187,32 @@
             back_button.UseVisualStyleBackColor = false;
             back_button.Click += back_button_Click;
             // 
+            // close_button
+            // 
+            close_button.BackColor = Color.Transparent;
+            close_button.BackgroundImage = (Image)resources.GetObject("close_button.BackgroundImage");
+            close_button.BackgroundImageLayout = ImageLayout.Zoom;
+            close_button.Cursor = Cursors.Hand;
+            close_button.FlatAppearance.BorderSize = 0;
+            close_button.FlatStyle = FlatStyle.Flat;
+            close_button.ForeColor = Color.Transparent;
+            close_button.Location = new Point(1327, 12);
+            close_button.Name = "close_button";
+            close_button.Size = new Size(52, 39);
+            close_button.TabIndex = 3;
+            close_button.UseVisualStyleBackColor = false;
+            close_button.Click += close_button_Click;
+            // 
             // employee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1391, 666);
+            Controls.Add(close_button);
             Controls.Add(back_button);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "employee";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "employee";
@@ -217,5 +236,6 @@
         private TextBox textBox_employee_password;
         private Button show_button;
         private Label label2;
+        private Button close_button;
     }
 }

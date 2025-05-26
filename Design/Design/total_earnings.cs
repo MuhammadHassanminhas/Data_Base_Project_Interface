@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace Design
 {
-    public partial class total_earnings: Form
+    public partial class total_earnings : Form
     {
         public total_earnings()
         {
             InitializeComponent();
+        }
+
+        private void total_earnings_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

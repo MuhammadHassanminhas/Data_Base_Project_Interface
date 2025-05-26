@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(receptionist_dash_board));
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            owner_menu = new Button();
             panel3 = new Panel();
             panel4 = new Panel();
             receptionist_appointment = new Button();
@@ -47,7 +44,6 @@
             button4 = new Button();
             main_panel = new Panel();
             flowLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
             panel7.SuspendLayout();
@@ -57,7 +53,6 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.FromArgb(232, 164, 191);
-            flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.Controls.Add(panel3);
             flowLayoutPanel1.Controls.Add(panel5);
             flowLayoutPanel1.Controls.Add(panel7);
@@ -68,49 +63,12 @@
             flowLayoutPanel1.Size = new Size(263, 666);
             flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(253, 210, 227);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(owner_menu);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(246, 43);
-            panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Transparent;
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.BackgroundImageLayout = ImageLayout.Zoom;
-            panel2.Location = new Point(9, 9);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(32, 30);
-            panel2.TabIndex = 2;
-            // 
-            // owner_menu
-            // 
-            owner_menu.BackColor = Color.Transparent;
-            owner_menu.FlatAppearance.BorderSize = 0;
-            owner_menu.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            owner_menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            owner_menu.FlatStyle = FlatStyle.Flat;
-            owner_menu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            owner_menu.ForeColor = Color.Black;
-            owner_menu.Location = new Point(47, 2);
-            owner_menu.Name = "owner_menu";
-            owner_menu.Size = new Size(184, 37);
-            owner_menu.TabIndex = 2;
-            owner_menu.Text = "MENU";
-            owner_menu.UseVisualStyleBackColor = false;
-            owner_menu.Click += owner_menu_Click;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(253, 210, 227);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(receptionist_appointment);
-            panel3.Location = new Point(3, 52);
+            panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(246, 43);
             panel3.TabIndex = 4;
@@ -147,7 +105,7 @@
             panel5.BackColor = Color.FromArgb(253, 210, 227);
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(receptionist_generate_bill);
-            panel5.Location = new Point(3, 101);
+            panel5.Location = new Point(3, 52);
             panel5.Name = "panel5";
             panel5.Size = new Size(246, 43);
             panel5.TabIndex = 4;
@@ -184,7 +142,7 @@
             panel7.BackColor = Color.FromArgb(253, 210, 227);
             panel7.Controls.Add(panel8);
             panel7.Controls.Add(receptionist_view_records);
-            panel7.Location = new Point(3, 150);
+            panel7.Location = new Point(3, 101);
             panel7.Name = "panel7";
             panel7.Size = new Size(246, 43);
             panel7.TabIndex = 4;
@@ -221,7 +179,7 @@
             panel9.BackColor = Color.FromArgb(253, 210, 227);
             panel9.Controls.Add(panel10);
             panel9.Controls.Add(button4);
-            panel9.Location = new Point(3, 199);
+            panel9.Location = new Point(3, 150);
             panel9.Name = "panel9";
             panel9.Size = new Size(246, 43);
             panel9.TabIndex = 4;
@@ -275,7 +233,6 @@
             Text = "receptionist_dash_board";
             Load += receptionist_dash_board_Load;
             flowLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
@@ -286,9 +243,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
-        private Panel panel1;
-        private Panel panel2;
-        private Button owner_menu;
         private Panel panel3;
         private Panel panel4;
         private Button receptionist_appointment;

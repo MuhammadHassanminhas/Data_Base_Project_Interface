@@ -80,5 +80,11 @@ namespace Design
             loginForm.ShowDialog();
             this.Show();
         }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

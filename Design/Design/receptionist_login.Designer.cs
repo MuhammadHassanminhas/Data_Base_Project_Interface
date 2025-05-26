@@ -39,6 +39,7 @@
             panel2 = new Panel();
             owner_heading_main = new Label();
             back_button = new Button();
+            close_button = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -178,15 +179,33 @@
             back_button.UseVisualStyleBackColor = false;
             back_button.Click += back_button_Click;
             // 
+            // close_button
+            // 
+            close_button.BackColor = Color.Transparent;
+            close_button.BackgroundImage = (Image)resources.GetObject("close_button.BackgroundImage");
+            close_button.BackgroundImageLayout = ImageLayout.Zoom;
+            close_button.Cursor = Cursors.Hand;
+            close_button.FlatAppearance.BorderSize = 0;
+            close_button.FlatStyle = FlatStyle.Flat;
+            close_button.ForeColor = Color.Transparent;
+            close_button.Location = new Point(1327, 12);
+            close_button.Name = "close_button";
+            close_button.Size = new Size(52, 39);
+            close_button.TabIndex = 4;
+            close_button.UseVisualStyleBackColor = false;
+            close_button.Click += close_button_Click;
+            // 
             // receptionist_login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1391, 666);
+            Controls.Add(close_button);
             Controls.Add(panel1);
             Controls.Add(back_button);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "receptionist_login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "receptionist_login";
@@ -209,5 +228,6 @@
         private Panel panel2;
         private Label owner_heading_main;
         private Button back_button;
+        private Button close_button;
     }
 }

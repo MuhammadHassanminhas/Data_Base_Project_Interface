@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(total_earnings));
             panel1 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
             label4 = new Label();
             textBox9 = new TextBox();
             label8 = new Label();
@@ -41,7 +42,6 @@
             label3 = new Label();
             service_name = new TextBox();
             label2 = new Label();
-            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,6 +64,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1055, 314);
             panel1.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(165, 29);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 26;
             // 
             // label4
             // 
@@ -167,13 +174,6 @@
             label2.TabIndex = 4;
             label2.Text = "TOTAL SERVICES PER MONTH";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(165, 29);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 26;
-            // 
             // total_earnings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -184,6 +184,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "total_earnings";
+            Load += total_earnings_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employee_dash_board));
             panel1 = new Panel();
+            panel13 = new Panel();
+            panel14 = new Panel();
+            employee_logout = new Button();
             textBox5 = new TextBox();
             label9 = new Label();
             textBox4 = new TextBox();
@@ -49,12 +52,9 @@
             label4 = new Label();
             service_name = new TextBox();
             label2 = new Label();
-            panel13 = new Panel();
-            panel14 = new Panel();
-            employee_logout = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).BeginInit();
             panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -84,6 +84,43 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1349, 629);
             panel1.TabIndex = 3;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(253, 210, 227);
+            panel13.Controls.Add(panel14);
+            panel13.Controls.Add(employee_logout);
+            panel13.Location = new Point(1091, 572);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(246, 43);
+            panel13.TabIndex = 28;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.Transparent;
+            panel14.BackgroundImage = (Image)resources.GetObject("panel14.BackgroundImage");
+            panel14.BackgroundImageLayout = ImageLayout.Zoom;
+            panel14.Location = new Point(9, 9);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(32, 30);
+            panel14.TabIndex = 2;
+            // 
+            // employee_logout
+            // 
+            employee_logout.BackColor = Color.Transparent;
+            employee_logout.FlatAppearance.BorderSize = 0;
+            employee_logout.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            employee_logout.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            employee_logout.FlatStyle = FlatStyle.Flat;
+            employee_logout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            employee_logout.ForeColor = Color.Black;
+            employee_logout.Location = new Point(47, 3);
+            employee_logout.Name = "employee_logout";
+            employee_logout.Size = new Size(184, 37);
+            employee_logout.TabIndex = 2;
+            employee_logout.Text = "LOGOUT";
+            employee_logout.UseVisualStyleBackColor = false;
+            employee_logout.Click += employee_logout_Click;
             // 
             // textBox5
             // 
@@ -265,43 +302,6 @@
             label2.TabIndex = 2;
             label2.Text = "NAME";
             // 
-            // panel13
-            // 
-            panel13.BackColor = Color.FromArgb(253, 210, 227);
-            panel13.Controls.Add(panel14);
-            panel13.Controls.Add(employee_logout);
-            panel13.Location = new Point(1091, 572);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(246, 43);
-            panel13.TabIndex = 28;
-            // 
-            // panel14
-            // 
-            panel14.BackColor = Color.Transparent;
-            panel14.BackgroundImage = (Image)resources.GetObject("panel14.BackgroundImage");
-            panel14.BackgroundImageLayout = ImageLayout.Zoom;
-            panel14.Location = new Point(9, 9);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(32, 30);
-            panel14.TabIndex = 2;
-            // 
-            // employee_logout
-            // 
-            employee_logout.BackColor = Color.Transparent;
-            employee_logout.FlatAppearance.BorderSize = 0;
-            employee_logout.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            employee_logout.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            employee_logout.FlatStyle = FlatStyle.Flat;
-            employee_logout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            employee_logout.ForeColor = Color.Black;
-            employee_logout.Location = new Point(47, 3);
-            employee_logout.Name = "employee_logout";
-            employee_logout.Size = new Size(184, 37);
-            employee_logout.TabIndex = 2;
-            employee_logout.Text = "LOGOUT";
-            employee_logout.UseVisualStyleBackColor = false;
-            employee_logout.Click += employee_logout_Click;
-            // 
             // employee_dash_board
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -309,13 +309,14 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1391, 666);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "employee_dash_board";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "employee_dash_board";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).EndInit();
             panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)attendence_dataGridView).EndInit();
             ResumeLayout(false);
         }
 

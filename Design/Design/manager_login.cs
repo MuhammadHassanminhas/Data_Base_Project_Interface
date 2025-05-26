@@ -74,5 +74,11 @@ namespace Design
             signupForm.ShowDialog(); // Opens the new form in a modal way
             this.Show();
         }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
     }
 }

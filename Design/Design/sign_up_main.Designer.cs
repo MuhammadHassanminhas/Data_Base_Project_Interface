@@ -36,6 +36,7 @@
             manager_sign_up_button = new Button();
             owner_sign_up_button = new Button();
             welcome_back = new Label();
+            close_button = new Button();
             sign_up_page_panel.SuspendLayout();
             SuspendLayout();
             // 
@@ -137,15 +138,32 @@
             welcome_back.Text = "Welcome Back!";
             welcome_back.Click += welcome_back_Click;
             // 
+            // close_button
+            // 
+            close_button.BackColor = Color.Transparent;
+            close_button.BackgroundImage = (Image)resources.GetObject("close_button.BackgroundImage");
+            close_button.BackgroundImageLayout = ImageLayout.Zoom;
+            close_button.Cursor = Cursors.Hand;
+            close_button.FlatAppearance.BorderSize = 0;
+            close_button.FlatStyle = FlatStyle.Flat;
+            close_button.ForeColor = Color.Transparent;
+            close_button.Location = new Point(1327, 12);
+            close_button.Name = "close_button";
+            close_button.Size = new Size(52, 39);
+            close_button.TabIndex = 4;
+            close_button.UseVisualStyleBackColor = false;
+            close_button.Click += close_button_Click;
+            // 
             // sign_up_main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1391, 666);
+            Controls.Add(close_button);
             Controls.Add(sign_up_page_panel);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "sign_up_main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign up";
@@ -164,5 +182,6 @@
         private Button manager_sign_up_button;
         private Button owner_sign_up_button;
         private Panel logo_signup_main;
+        private Button close_button;
     }
 }
