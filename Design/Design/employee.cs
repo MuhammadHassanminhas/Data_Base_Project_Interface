@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Design
 {
     public partial class employee : Form
     {
+        private string connectionString = "server=localhost;database=beauty_salon;uid=root;pwd=root;";
         public employee()
         {
             InitializeComponent();
             ApplyRoundedButtons();
         }
+
         private void ApplyRoundedButtons()
         {
             // Apply rounded corners to buttons on form load
@@ -44,30 +47,70 @@ namespace Design
         }
         private void hide_button_Click(object sender, EventArgs e)
         {
-            if (textBox_employee_password.PasswordChar == '\0')
+            if (emp_password.PasswordChar == '\0')
             {
                 show_button.BringToFront();
-                textBox_employee_password.PasswordChar = '*';
+                emp_password.PasswordChar = '*';
             }
         }
 
 
         private void show_button_Click(object sender, EventArgs e)
         {
-            if (textBox_employee_password.PasswordChar == '*')
+            if (emp_password.PasswordChar == '*')
             {
                 hide_button.BringToFront();
-                textBox_employee_password.PasswordChar = '\0';
+                emp_password.PasswordChar = '\0';
             }
         }
 
         private void owner_login_up_button_Click(object sender, EventArgs e)
         {
-            employee_dash_board loginForm = new employee_dash_board();
-            this.Hide();
-            loginForm.ShowDialog();
-            this.Show();
+            int staffID;
+            if (!int.TryParse(Employee_ID.Text.Trim(), out staffID))
+            {
+                MessageBox.Show("Please enter a valid Staff ID.");
+                return;
+            }
 
+            string password = emp_password.Text.Trim();
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter a password.");
+                return;
+            }
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlCommand cmd = new MySqlCommand("EmployeeLogin", conn))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@emp_id", staffID);
+                cmd.Parameters.AddWithValue("@emp_pass", password);
+
+                try
+                {
+                    conn.Open();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            // Open Employee Dashboard
+                            employee_dash_board dashboard = new employee_dash_board(staffID);
+                            dashboard.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid credentials!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
 
         private void close_button_Click(object sender, EventArgs e)

@@ -92,8 +92,9 @@
             flowLayoutPanel1.Controls.Add(panel13);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(263, 666);
+            flowLayoutPanel1.Size = new Size(301, 888);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // panel3
@@ -101,9 +102,14 @@
             panel3.BackColor = Color.FromArgb(253, 210, 227);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(total_earning);
+<<<<<<< HEAD
             panel3.Location = new Point(3, 3);
+=======
+            panel3.Location = new Point(3, 4);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             panel3.Name = "panel3";
-            panel3.Size = new Size(246, 43);
+            panel3.Size = new Size(281, 57);
             panel3.TabIndex = 3;
             // 
             // panel4
@@ -111,9 +117,10 @@
             panel4.BackColor = Color.Transparent;
             panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.BackgroundImageLayout = ImageLayout.Zoom;
-            panel4.Location = new Point(9, 9);
+            panel4.Location = new Point(10, 12);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(32, 30);
+            panel4.Size = new Size(37, 40);
             panel4.TabIndex = 2;
             // 
             // total_earning
@@ -125,9 +132,10 @@
             total_earning.FlatStyle = FlatStyle.Flat;
             total_earning.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             total_earning.ForeColor = Color.Black;
-            total_earning.Location = new Point(47, 3);
+            total_earning.Location = new Point(54, 4);
+            total_earning.Margin = new Padding(3, 4, 3, 4);
             total_earning.Name = "total_earning";
-            total_earning.Size = new Size(184, 37);
+            total_earning.Size = new Size(210, 49);
             total_earning.TabIndex = 2;
             total_earning.Text = "TOTAL EARNING";
             total_earning.UseVisualStyleBackColor = false;
@@ -138,9 +146,14 @@
             panel5.BackColor = Color.FromArgb(253, 210, 227);
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(owner_stock);
+<<<<<<< HEAD
             panel5.Location = new Point(3, 52);
+=======
+            panel5.Location = new Point(3, 69);
+            panel5.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             panel5.Name = "panel5";
-            panel5.Size = new Size(246, 43);
+            panel5.Size = new Size(281, 57);
             panel5.TabIndex = 3;
             // 
             // panel6
@@ -148,9 +161,10 @@
             panel6.BackColor = Color.Transparent;
             panel6.BackgroundImage = (Image)resources.GetObject("panel6.BackgroundImage");
             panel6.BackgroundImageLayout = ImageLayout.Zoom;
-            panel6.Location = new Point(9, 9);
+            panel6.Location = new Point(10, 12);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(32, 30);
+            panel6.Size = new Size(37, 40);
             panel6.TabIndex = 2;
             // 
             // owner_stock
@@ -162,9 +176,10 @@
             owner_stock.FlatStyle = FlatStyle.Flat;
             owner_stock.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             owner_stock.ForeColor = Color.Black;
-            owner_stock.Location = new Point(47, 2);
+            owner_stock.Location = new Point(54, 3);
+            owner_stock.Margin = new Padding(3, 4, 3, 4);
             owner_stock.Name = "owner_stock";
-            owner_stock.Size = new Size(184, 37);
+            owner_stock.Size = new Size(210, 49);
             owner_stock.TabIndex = 2;
             owner_stock.Text = "STOCK";
             owner_stock.UseVisualStyleBackColor = false;
@@ -175,9 +190,14 @@
             panel11.BackColor = Color.FromArgb(253, 210, 227);
             panel11.Controls.Add(panel12);
             panel11.Controls.Add(services);
+<<<<<<< HEAD
             panel11.Location = new Point(3, 101);
+=======
+            panel11.Location = new Point(3, 134);
+            panel11.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             panel11.Name = "panel11";
-            panel11.Size = new Size(246, 43);
+            panel11.Size = new Size(281, 57);
             panel11.TabIndex = 3;
             // 
             // panel12
@@ -185,9 +205,10 @@
             panel12.BackColor = Color.Transparent;
             panel12.BackgroundImage = (Image)resources.GetObject("panel12.BackgroundImage");
             panel12.BackgroundImageLayout = ImageLayout.Zoom;
-            panel12.Location = new Point(9, 9);
+            panel12.Location = new Point(10, 12);
+            panel12.Margin = new Padding(3, 4, 3, 4);
             panel12.Name = "panel12";
-            panel12.Size = new Size(32, 30);
+            panel12.Size = new Size(37, 40);
             panel12.TabIndex = 2;
             // 
             // services
@@ -199,9 +220,10 @@
             services.FlatStyle = FlatStyle.Flat;
             services.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             services.ForeColor = Color.Black;
-            services.Location = new Point(47, 3);
+            services.Location = new Point(54, 4);
+            services.Margin = new Padding(3, 4, 3, 4);
             services.Name = "services";
-            services.Size = new Size(184, 37);
+            services.Size = new Size(210, 49);
             services.TabIndex = 2;
             services.Text = "SERVICES";
             services.UseVisualStyleBackColor = false;
@@ -213,9 +235,16 @@
             employee_menu_container.Controls.Add(panel7);
             employee_menu_container.Controls.Add(panel15);
             employee_menu_container.Controls.Add(panel17);
+<<<<<<< HEAD
             employee_menu_container.Location = new Point(3, 150);
             employee_menu_container.Name = "employee_menu_container";
             employee_menu_container.Size = new Size(246, 49);
+=======
+            employee_menu_container.Location = new Point(3, 199);
+            employee_menu_container.Margin = new Padding(3, 4, 3, 4);
+            employee_menu_container.Name = "employee_menu_container";
+            employee_menu_container.Size = new Size(281, 70);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             employee_menu_container.TabIndex = 2;
             employee_menu_container.Paint += employee_menu_container_Paint;
             // 
@@ -224,19 +253,22 @@
             panel7.BackColor = Color.FromArgb(253, 210, 227);
             panel7.Controls.Add(panel8);
             panel7.Controls.Add(employee_button);
-            panel7.Location = new Point(3, 3);
+            panel7.Location = new Point(3, 4);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(228, 43);
+            panel7.Size = new Size(261, 57);
             panel7.TabIndex = 3;
+            panel7.Paint += panel7_Paint;
             // 
             // panel8
             // 
             panel8.BackColor = Color.Transparent;
             panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
             panel8.BackgroundImageLayout = ImageLayout.Zoom;
-            panel8.Location = new Point(9, 9);
+            panel8.Location = new Point(10, 12);
+            panel8.Margin = new Padding(3, 4, 3, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(32, 30);
+            panel8.Size = new Size(37, 40);
             panel8.TabIndex = 2;
             // 
             // employee_button
@@ -248,9 +280,10 @@
             employee_button.FlatStyle = FlatStyle.Flat;
             employee_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             employee_button.ForeColor = Color.Black;
-            employee_button.Location = new Point(47, 2);
+            employee_button.Location = new Point(54, 3);
+            employee_button.Margin = new Padding(3, 4, 3, 4);
             employee_button.Name = "employee_button";
-            employee_button.Size = new Size(163, 37);
+            employee_button.Size = new Size(186, 49);
             employee_button.TabIndex = 2;
             employee_button.Text = "EMPLOYEE";
             employee_button.UseVisualStyleBackColor = false;
@@ -261,9 +294,10 @@
             panel15.BackColor = Color.FromArgb(232, 164, 191);
             panel15.Controls.Add(panel16);
             panel15.Controls.Add(paycheck_button);
-            panel15.Location = new Point(3, 52);
+            panel15.Location = new Point(3, 69);
+            panel15.Margin = new Padding(3, 4, 3, 4);
             panel15.Name = "panel15";
-            panel15.Size = new Size(231, 43);
+            panel15.Size = new Size(264, 57);
             panel15.TabIndex = 4;
             // 
             // panel16
@@ -271,9 +305,10 @@
             panel16.BackColor = Color.Transparent;
             panel16.BackgroundImage = (Image)resources.GetObject("panel16.BackgroundImage");
             panel16.BackgroundImageLayout = ImageLayout.Zoom;
-            panel16.Location = new Point(9, 9);
+            panel16.Location = new Point(10, 12);
+            panel16.Margin = new Padding(3, 4, 3, 4);
             panel16.Name = "panel16";
-            panel16.Size = new Size(32, 30);
+            panel16.Size = new Size(37, 40);
             panel16.TabIndex = 2;
             // 
             // paycheck_button
@@ -285,9 +320,10 @@
             paycheck_button.FlatStyle = FlatStyle.Flat;
             paycheck_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             paycheck_button.ForeColor = Color.Black;
-            paycheck_button.Location = new Point(47, 2);
+            paycheck_button.Location = new Point(54, 3);
+            paycheck_button.Margin = new Padding(3, 4, 3, 4);
             paycheck_button.Name = "paycheck_button";
-            paycheck_button.Size = new Size(169, 37);
+            paycheck_button.Size = new Size(193, 49);
             paycheck_button.TabIndex = 2;
             paycheck_button.Text = "PAYCHECK";
             paycheck_button.UseVisualStyleBackColor = false;
@@ -298,9 +334,10 @@
             panel17.BackColor = Color.FromArgb(232, 164, 191);
             panel17.Controls.Add(panel18);
             panel17.Controls.Add(attendence_button);
-            panel17.Location = new Point(3, 101);
+            panel17.Location = new Point(3, 134);
+            panel17.Margin = new Padding(3, 4, 3, 4);
             panel17.Name = "panel17";
-            panel17.Size = new Size(231, 43);
+            panel17.Size = new Size(264, 57);
             panel17.TabIndex = 4;
             // 
             // panel18
@@ -308,9 +345,10 @@
             panel18.BackColor = Color.Transparent;
             panel18.BackgroundImage = (Image)resources.GetObject("panel18.BackgroundImage");
             panel18.BackgroundImageLayout = ImageLayout.Zoom;
-            panel18.Location = new Point(9, 9);
+            panel18.Location = new Point(10, 12);
+            panel18.Margin = new Padding(3, 4, 3, 4);
             panel18.Name = "panel18";
-            panel18.Size = new Size(32, 30);
+            panel18.Size = new Size(37, 40);
             panel18.TabIndex = 2;
             // 
             // attendence_button
@@ -322,9 +360,10 @@
             attendence_button.FlatStyle = FlatStyle.Flat;
             attendence_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             attendence_button.ForeColor = Color.Black;
-            attendence_button.Location = new Point(47, 2);
+            attendence_button.Location = new Point(54, 3);
+            attendence_button.Margin = new Padding(3, 4, 3, 4);
             attendence_button.Name = "attendence_button";
-            attendence_button.Size = new Size(169, 37);
+            attendence_button.Size = new Size(193, 49);
             attendence_button.TabIndex = 2;
             attendence_button.Text = "ATTENDENCE";
             attendence_button.UseVisualStyleBackColor = false;
@@ -336,9 +375,14 @@
             records_menu_container.Controls.Add(panel9);
             records_menu_container.Controls.Add(panel20);
             records_menu_container.Controls.Add(panel22);
+<<<<<<< HEAD
             records_menu_container.Location = new Point(3, 205);
+=======
+            records_menu_container.Location = new Point(3, 277);
+            records_menu_container.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             records_menu_container.Name = "records_menu_container";
-            records_menu_container.Size = new Size(246, 51);
+            records_menu_container.Size = new Size(281, 206);
             records_menu_container.TabIndex = 6;
             // 
             // panel9
@@ -346,9 +390,10 @@
             panel9.BackColor = Color.FromArgb(253, 210, 227);
             panel9.Controls.Add(panel10);
             panel9.Controls.Add(records_button);
-            panel9.Location = new Point(3, 3);
+            panel9.Location = new Point(3, 4);
+            panel9.Margin = new Padding(3, 4, 3, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(231, 43);
+            panel9.Size = new Size(264, 57);
             panel9.TabIndex = 4;
             // 
             // panel10
@@ -356,9 +401,10 @@
             panel10.BackColor = Color.Transparent;
             panel10.BackgroundImage = (Image)resources.GetObject("panel10.BackgroundImage");
             panel10.BackgroundImageLayout = ImageLayout.Zoom;
-            panel10.Location = new Point(9, 9);
+            panel10.Location = new Point(10, 12);
+            panel10.Margin = new Padding(3, 4, 3, 4);
             panel10.Name = "panel10";
-            panel10.Size = new Size(32, 30);
+            panel10.Size = new Size(37, 40);
             panel10.TabIndex = 2;
             // 
             // records_button
@@ -370,9 +416,10 @@
             records_button.FlatStyle = FlatStyle.Flat;
             records_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             records_button.ForeColor = Color.Black;
-            records_button.Location = new Point(47, 2);
+            records_button.Location = new Point(54, 3);
+            records_button.Margin = new Padding(3, 4, 3, 4);
             records_button.Name = "records_button";
-            records_button.Size = new Size(181, 37);
+            records_button.Size = new Size(207, 49);
             records_button.TabIndex = 2;
             records_button.Text = "RECORDS";
             records_button.UseVisualStyleBackColor = false;
@@ -383,9 +430,10 @@
             panel20.BackColor = Color.FromArgb(232, 164, 191);
             panel20.Controls.Add(panel21);
             panel20.Controls.Add(employee_record_button);
-            panel20.Location = new Point(3, 52);
+            panel20.Location = new Point(3, 69);
+            panel20.Margin = new Padding(3, 4, 3, 4);
             panel20.Name = "panel20";
-            panel20.Size = new Size(231, 43);
+            panel20.Size = new Size(264, 57);
             panel20.TabIndex = 5;
             // 
             // panel21
@@ -393,9 +441,10 @@
             panel21.BackColor = Color.Transparent;
             panel21.BackgroundImage = (Image)resources.GetObject("panel21.BackgroundImage");
             panel21.BackgroundImageLayout = ImageLayout.Zoom;
-            panel21.Location = new Point(9, 9);
+            panel21.Location = new Point(10, 12);
+            panel21.Margin = new Padding(3, 4, 3, 4);
             panel21.Name = "panel21";
-            panel21.Size = new Size(32, 30);
+            panel21.Size = new Size(37, 40);
             panel21.TabIndex = 2;
             // 
             // employee_record_button
@@ -407,9 +456,10 @@
             employee_record_button.FlatStyle = FlatStyle.Flat;
             employee_record_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             employee_record_button.ForeColor = Color.Black;
-            employee_record_button.Location = new Point(47, 2);
+            employee_record_button.Location = new Point(54, 3);
+            employee_record_button.Margin = new Padding(3, 4, 3, 4);
             employee_record_button.Name = "employee_record_button";
-            employee_record_button.Size = new Size(169, 37);
+            employee_record_button.Size = new Size(193, 49);
             employee_record_button.TabIndex = 2;
             employee_record_button.Text = "EMPLOYEE";
             employee_record_button.UseVisualStyleBackColor = false;
@@ -420,9 +470,10 @@
             panel22.BackColor = Color.FromArgb(232, 164, 191);
             panel22.Controls.Add(panel23);
             panel22.Controls.Add(client_record_button);
-            panel22.Location = new Point(3, 101);
+            panel22.Location = new Point(3, 134);
+            panel22.Margin = new Padding(3, 4, 3, 4);
             panel22.Name = "panel22";
-            panel22.Size = new Size(231, 43);
+            panel22.Size = new Size(264, 57);
             panel22.TabIndex = 5;
             // 
             // panel23
@@ -430,9 +481,10 @@
             panel23.BackColor = Color.Transparent;
             panel23.BackgroundImage = (Image)resources.GetObject("panel23.BackgroundImage");
             panel23.BackgroundImageLayout = ImageLayout.Zoom;
-            panel23.Location = new Point(9, 9);
+            panel23.Location = new Point(10, 12);
+            panel23.Margin = new Padding(3, 4, 3, 4);
             panel23.Name = "panel23";
-            panel23.Size = new Size(32, 30);
+            panel23.Size = new Size(37, 40);
             panel23.TabIndex = 2;
             // 
             // client_record_button
@@ -444,9 +496,10 @@
             client_record_button.FlatStyle = FlatStyle.Flat;
             client_record_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             client_record_button.ForeColor = Color.Black;
-            client_record_button.Location = new Point(47, 2);
+            client_record_button.Location = new Point(54, 3);
+            client_record_button.Margin = new Padding(3, 4, 3, 4);
             client_record_button.Name = "client_record_button";
-            client_record_button.Size = new Size(163, 37);
+            client_record_button.Size = new Size(186, 49);
             client_record_button.TabIndex = 2;
             client_record_button.Text = "CLIENT";
             client_record_button.UseVisualStyleBackColor = false;
@@ -457,9 +510,14 @@
             panel13.BackColor = Color.FromArgb(253, 210, 227);
             panel13.Controls.Add(panel14);
             panel13.Controls.Add(owner_logout);
+<<<<<<< HEAD
             panel13.Location = new Point(3, 262);
+=======
+            panel13.Location = new Point(3, 491);
+            panel13.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             panel13.Name = "panel13";
-            panel13.Size = new Size(246, 43);
+            panel13.Size = new Size(281, 57);
             panel13.TabIndex = 5;
             // 
             // panel14
@@ -467,9 +525,10 @@
             panel14.BackColor = Color.Transparent;
             panel14.BackgroundImage = (Image)resources.GetObject("panel14.BackgroundImage");
             panel14.BackgroundImageLayout = ImageLayout.Zoom;
-            panel14.Location = new Point(9, 9);
+            panel14.Location = new Point(10, 12);
+            panel14.Margin = new Padding(3, 4, 3, 4);
             panel14.Name = "panel14";
-            panel14.Size = new Size(32, 30);
+            panel14.Size = new Size(37, 40);
             panel14.TabIndex = 2;
             // 
             // owner_logout
@@ -481,9 +540,10 @@
             owner_logout.FlatStyle = FlatStyle.Flat;
             owner_logout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             owner_logout.ForeColor = Color.Black;
-            owner_logout.Location = new Point(47, 3);
+            owner_logout.Location = new Point(54, 4);
+            owner_logout.Margin = new Padding(3, 4, 3, 4);
             owner_logout.Name = "owner_logout";
-            owner_logout.Size = new Size(184, 37);
+            owner_logout.Size = new Size(210, 49);
             owner_logout.TabIndex = 2;
             owner_logout.Text = "LOGOUT";
             owner_logout.UseVisualStyleBackColor = false;
@@ -501,21 +561,26 @@
             // 
             main_panel.BackgroundImage = (Image)resources.GetObject("main_panel.BackgroundImage");
             main_panel.Dock = DockStyle.Fill;
-            main_panel.Location = new Point(263, 0);
+            main_panel.Location = new Point(301, 0);
+            main_panel.Margin = new Padding(3, 4, 3, 4);
             main_panel.Name = "main_panel";
-            main_panel.Size = new Size(1128, 666);
+            main_panel.Size = new Size(1289, 888);
             main_panel.TabIndex = 2;
             // 
             // owner_dash_board
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1391, 666);
+            ClientSize = new Size(1590, 888);
             Controls.Add(main_panel);
             Controls.Add(flowLayoutPanel1);
             ForeColor = Color.FromArgb(255, 136, 183);
+<<<<<<< HEAD
             FormBorderStyle = FormBorderStyle.None;
+=======
+            Margin = new Padding(3, 4, 3, 4);
+>>>>>>> e9c65780ba084b63cf9f3c2eb1cc713377add089
             Name = "owner_dash_board";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "owner_dash_board";

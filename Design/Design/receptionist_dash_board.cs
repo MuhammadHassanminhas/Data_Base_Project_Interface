@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//using CefSharp;
+//using CefSharp.WinForms;
 namespace Design
 {
     public partial class receptionist_dash_board : Form
@@ -61,6 +62,11 @@ namespace Design
             this.Hide();
             loginForm.ShowDialog();
             this.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
